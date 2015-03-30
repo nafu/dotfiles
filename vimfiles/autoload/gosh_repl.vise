@@ -1,0 +1,132 @@
+;=============================================================================
+; FILE: gosh_repl.vise
+; AUTHOR:  aharisu <foo.yobina@gmail.com>
+; Last Modified: 15 Feb 2013.
+; License: MIT license;{{{
+;     Permission is hereby granted, free of charge, to any person obtaining
+;     a copy of this software and associated documentation files (the
+;     "Software"), to deal in the Software without restriction, including
+;     without limitation the rights to use, copy, modify, merge, publish,
+;     distribute, sublicense, and/or sell copies of the Software, and to
+;     permit persons to whom the Software is furnished to do so, subject to
+;     the following conditions:
+;
+;     The above copyright notice and this permission notice shall be included
+;     in all copies or substantial portions of the Software.
+;
+;     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+;     OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+;     MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+;     IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+;     CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+;     TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+;     SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.;}}}
+;=============================================================================
+
+(include "common-macro.vise")
+
+(defvar gosh-repl-directory (substitute (cur-source-file :fullpath :directory) "\\" "/" "g"))
+(defvar gosh-repl-body-path (s+ gosh-repl-directory "/gosh_repl/repl.scm"))
+
+(defmacro enable-auto-use-exp ();{{{
+  `(if g:gosh-enable-auto-use
+     "(define *enable-auto-use* #t)"
+     "(define *enable-auto-use* #f)"));}}}
+
+(defmacro gosh-repl-body (in-arguments?);{{{
+  (if in-arguments?
+    `(s+ " -e \"(begin " 
+         (enable-auto-use-exp)
+         " (include \\\"" gosh-repl-body-path "\\\") (exit))\"")
+    `(s+ "(begin " 
+         (enable-auto-use-exp)
+         " (include \"" gosh-repl-body-path "\") (exit))")));}}}
+
+(defmacro open-goshrepl body;{{{
+  `(vimproc#popen2
+     (s+ "gosh -b"
+         " -u gauche.interactive"
+         " -I" gosh-repl-directory "/gosh_repl/"
+         ,@body)));}}}
+
+(defun open-gosh-proc ();{{{
+  (open-goshrepl (gosh-repl-body #t)));}}}
+
+(defun open-gosh-proc-with-buf (bufnr);{{{
+  (let ([proc (open-goshrepl)]
+        [exception #f])
+    (try 
+      [begin
+        (dolist [line (getbufline bufnr 1 "$")]
+          ((ref proc 'stdin 'write) (s+ line "\n")))
+        (sleep '100ms)
+        ((ref proc 'stdin 'write) (s+ (gosh-repl-body #f) "\n"))]
+      [else
+        (set! exception #t)])
+    (sleep '100ms)
+    (when (or (not (ref proc 'is_valid))
+            (not (ref proc 'stdin 'is_valid)) (ref proc 'stdin 'eof)
+            (not (ref proc 'stdout 'is_valid)) (ref proc 'stdout 'eof))
+      (set! exception #t))
+    (if exception
+      (begin
+        (echo-err (join ((ref proc 'stdout 'read_lines)) "\n"))
+        (open-gosh-proc))
+      proc)));}}}
+
+(defun buffer-open-cmd (direc conf);{{{
+  (if (=~# direc "^v")
+    (s+ g:gosh_buffer_width ":vs")
+    (s+ g:gosh_buffer_height ":sp")));}}}
+
+(defmacro gosh-config args;{{{
+  `(dict
+     (caption "gosh REPL")
+     (mark "ieie_gosh_repl")
+     (filetype "gosh-repl")
+     (buffer-enter buffer-enter)
+     (buffer-leave buffer-leave)
+     ,@args
+     ));}}}
+        
+(defun gosh-repl#open-gosh-repl (:rest cmd);{{{
+  (ieie#open-interactive
+    (gosh-config
+      (buffer-open (pa$1 buffer-open-cmd (get-rest cmd g:gosh-buffer-direction)))
+      (proc open-gosh-proc)
+      )));}}}
+
+(defun gosh-repl#open-gosh-repl-with-buffer (:rest cmd);{{{
+  (ieie#open-interactive
+    (gosh-config
+      (buffer-open (pa$1 buffer-open-cmd (get-rest cmd g:gosh-buffer-direction)))
+      (always-new #t)
+      (proc (pa$0 open-gosh-proc-with-buf (bufnr "%")))
+      )));}}}
+
+;
+;callback
+
+(defvar b:lispwords "")
+
+(defun buffer-enter (ctx);{{{
+  (when (or (not (exists "b:lispwords")) (empty b:lispwords))
+    (set! b:lispwords &lispwords)
+    (set! &lispwords "lambda,and,or,if,cond,case,define,let,let*,letrec,begin,do,delay,set!,else,=>,quote,quasiquote,unquote,unquote-splicing,define-syntax,let-syntax,letrec-syntax,syntax-rules,%macroexpand,%macroexpand-1,and-let*,current-module,define-class,define-constant,define-generic,define-in-module,define-inline,define-macro,define-method,define-module,eval-when,export,export-all,extend,import,include,lazy,receive,require,select-module,unless,when,with-module,$,$*,$<<,$do,$do*,$lazy,$many-chars,$or,$satisfy,%do-ec,%ec-guarded-do-ec,%first-ec,%guard-rec,%replace-keywords,--,^,^*,^-generator,^.,^_,^a,^b,^c,^d,^e,^f,^g,^h,^i,^j,^k,^l,^m,^n,^o,^p,^q,^r,^s,^t,^u,^w,^v,^x,^y,^z,add-load-path,any?-ec,append-ec,apropos,assert,autoload,begin0,case-lambda,check-arg,cond-expand,cond-list,condition,cut,cute,debug-print,dec!,declare,define-^x,define-cgen-literal,define-cise-expr,define-cise-macro,define-cise-stmt,define-cise-toplevel,define-compiler-macro,define-condition-type,define-record-type,define-values,do-ec,do-ec:do,dolist,dotimes,ec-guarded-do-ec,ec-simplify,every?-ec,export-if-defined,first-ec,fluid-let,fold-ec,fold3-ec,get-keyword*,get-optional,guard,http-cond-receiver,if-let1,inc!,inline-stub,last-ec,let*-values,let-args,let-keywords,let-keywords*,let-optionals*,let-string-start+end,let-values,let/cc,let1,list-ec,make-option-parser,match,match-define,match-lambda,match-lambda*,match-let,match-let*,match-let1,match-letrec,max-ec,min-ec,parameterize,parse-options,pop!,product-ec,program,push!,rec,require-extension,reset,rlet1,rxmatch-case,rxmatch-cond,rxmatch-if,rxmatch-let,set!-values,shift,srfi-42-,srfi-42-char-range,srfi-42-dispatched,srfi-42-do,srfi-42-generator-proc,srfi-42-integers,srfi-42-let,srfi-42-list,srfi-42-parallel,srfi-42-parallel-1,srfi-42-port,srfi-42-range,srfi-42-real-range,srfi-42-string42-until-1,srfi-42-untilfi-42-vectorfi-42-while-1srfi-42-whilefi-42-while-2ax:make-parserssax:make-elem-parser,stream-cons,ssax:make-pi-parsertream-delay,string-append-ec,string-ec,sum-ec,sxml:find-name-separator,syntax-errorx-errorfime,test*,until,unwind-protect,update!,use,use-version,values-ref,vector-ec,vector-of-length-ec,while,with-builder,with-iteratorwith-signal-handlers,with-time-counter,xmac,xmac1")));}}}
+
+(defun buffer-leave (ctx);{{{
+  (when (and (exists "b:lispwords") (not (empty b:lispwords)))
+    (set! &lispwords b:lispwords)
+    (set! b:lispwords "")));}}}
+
+
+;
+;command
+
+(defun gosh-repl#send-text-block () :range;{{{
+  (ieie#send-text-block gosh-repl#open-gosh-repl "ieie_gosh_repl")) ;}}}
+
+(defun gosh-repl#send-text (text);{{{
+  (ieie#send-text gosh-repl#open-gosh-repl "ieie_gosh_repl" text)) ;}}}
+
+; vim: foldmethod=marker commentstring=;%s
