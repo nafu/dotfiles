@@ -95,6 +95,9 @@ NeoBundle 'tpope/vim-endwise'
 " コメントON/OFFを手軽に実行
 NeoBundle 'tomtom/tcomment_vim'
 
+" ログファイルを色づけしてくれる
+NeoBundle 'vim-scripts/AnsiEsc.vim'
+
 call neobundle#end()
 
 " Required:
