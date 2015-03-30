@@ -89,6 +89,9 @@ NeoBundle 'lervag/vimtex'
 " OpenBrowser
 NeoBundle 'tyru/open-browser.vim'
 
+" Ruby向けにendを自動挿入してくれる
+NeoBundle 'tpope/vim-endwise'
+
 call neobundle#end()
 
 " Required:
