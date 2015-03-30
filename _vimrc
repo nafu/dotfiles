@@ -98,6 +98,9 @@ NeoBundle 'tomtom/tcomment_vim'
 " ログファイルを色づけしてくれる
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 
+" 行末の半角スペースを可視化
+NeoBundle 'bronson/vim-trailing-whitespace'
+
 call neobundle#end()
 
 " Required:
