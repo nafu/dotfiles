@@ -102,6 +102,9 @@ NeoBundle 'vim-scripts/AnsiEsc.vim'
 " 行末の半角スペースを可視化
 NeoBundle 'bronson/vim-trailing-whitespace'
 
+" Maintains a history of previous yanks, changes and deletes
+NeoBundle 'vim-scripts/YankRing.vim'
+
 call neobundle#end()
 
 " Required:
