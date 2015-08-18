@@ -105,6 +105,9 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 " Maintains a history of previous yanks, changes and deletes
 NeoBundle 'vim-scripts/YankRing.vim'
 
+" WakaTime
+NeoBundle 'wakatime/vim-wakatime'
+
 call neobundle#end()
 
 " Required:
