@@ -179,6 +179,8 @@ noremap  <silent> <C-E> :call RubyRun()<CR>
 vnoremap <silent> <C-E> :call RubyRangeRun()<CR>
 
 " pLaTeX
+" Usage: \ll, \lv
+" http://shkh.hatenablog.com/entry/2012/04/30/214107
 filetype plugin on
 let tex_flavor = 'latex'
 set grepprg=grep\ -nH\ $*
