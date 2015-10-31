@@ -1,0 +1,45 @@
+[user]
+	name = Fumiya Nakamura
+	email = nakamurafumiya003@gmail.com
+[alias]
+	st = status
+	co = checkout
+[color]
+	ui = true
+[color "diff"]
+        new = yellow
+        old = blue
+[core]
+	excludesfile = /Users/nafu/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[url "git@github.com:"]
+	pushinsteadof = "https://github.com/"
+	pushinsteadof = "git://github.com/"
+#[url "https://github.com/"]
+#	pushinsteadof = "git@github.com:"
+#	pushinsteadof = "git://github.com/"
+[heroku]
+	account = me
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[credential]
+	helper = osxkeychain
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[github]
+	user = nafu
+[ghi]
+	token = !security find-internet-password -a nafu -s github.com -l 'ghi token' -w
