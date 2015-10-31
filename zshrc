@@ -1,5 +1,6 @@
 # Set Colors
 export LSCOLORS=gxfxcxdxbxegedabagacad
+export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:'
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/share/cakephp/2.1.0/lib/Cake/Console:~/usr/local/lazy-git/bin:$PATH
 # For MAMP MySQL
@@ -70,6 +71,7 @@ bindkey -e
 # 補完システムを利用：補完の挙動が分かりやすくなる２つの設定のみ記述
 zstyle ':completion:*' format '%BCompleting %d%b'
 zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 autoload -U compinit && compinit
 
 # get and show branch name
