@@ -20,3 +20,7 @@ if [ "$(uname)" == "Darwin" ]; then
         . "install/osx.sh"
     fi
 fi
+
+# Update submodule
+git submodule init
+git submodule update
