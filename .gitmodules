@@ -4,3 +4,6 @@
 [submodule "todo.txt-cli"]
 	path = todo.txt-cli
 	url = git@github.com:ginatrapani/todo.txt-cli.git
+[submodule "lazy-git"]
+	path = lazy-git
+	url = git@github.com:nafu/lazy-git.git
