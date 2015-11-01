@@ -5,8 +5,8 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/share/cakephp/2.1.0/lib/Cake/Console:~/usr/local/lazy-git/bin:$PATH
 # For MAMP MySQL
 # export PATH=/usr/local/bin:/usr/local/sbin:/Applications/MAMP/Library/bin:/usr/share/cakephp/2.1.0/lib/Cake/Console:~/usr/local/lazy-git/bin:$PATH
-export PATH=~/usr/local/todo.txt:$PATH
-source ~/usr/local/todo.txt/todo_completion
+export PATH=~/dotfiles/todo.txt-cli:$PATH
+source ~/dotfiles/todo.txt-cli/todo_completion
 export EDITOR=vim
 
 # Go
