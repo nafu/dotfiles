@@ -12,6 +12,7 @@ apps=(
     vim --with-brewed-openssl
     wget
     awscli
+    ack
 )
 
 brew install "${apps[@]}"
