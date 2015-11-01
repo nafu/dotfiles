@@ -24,3 +24,8 @@ fi
 # Update submodule
 git submodule init
 git submodule update
+
+# todo.txt setup
+ln -sv ~/dotfiles/todo.txt-cli/todo.txt ~/Dropbox/todo/todo.txt
+ln -sv ~/dotfiles/todo.txt-cli/done.txt ~/Dropbox/todo/done.txt
+ln -sv ~/dotfiles/todo.txt-cli/report.txt ~/Dropbox/todo/report.txt
