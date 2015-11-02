@@ -13,6 +13,9 @@ ln -sfv ~/dotfiles/zshenv ~/.zshenv
 
 # vim
 ln -sfv ~/dotfiles/_vimrc ~/.vimrc
+# Use below if you don't want to delete old .vim
+# mv ~/.vim ~/.vim.`date '+%Y%m%d'`
+rm -r ~/.vim
 ln -sfv ~/dotfiles/vimfiles ~/.vim
 
 if [ "$(uname)" == "Darwin" ]; then
