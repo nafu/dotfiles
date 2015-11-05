@@ -108,6 +108,9 @@ NeoBundle 'vim-scripts/YankRing.vim'
 " WakaTime
 NeoBundle 'wakatime/vim-wakatime'
 
+" ack
+NeoBundle 'mileszs/ack.vim'
+
 call neobundle#end()
 
 " Required:
@@ -189,6 +192,9 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_CompileRule_dvi = 'platex --interaction=nonstopmode $*'
 let g:Tex_CompileRule_pdf = 'dvipdfmx $*.dvi'
 let g:Tex_FormatDependency_pdf = 'dvi,pdf'
+
+" ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Ruby
 set tags+=gems.tags
