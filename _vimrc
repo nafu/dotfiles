@@ -113,6 +113,9 @@ NeoBundle 'wakatime/vim-wakatime'
 " ack
 NeoBundle 'mileszs/ack.vim'
 
+" Dash
+NeoBundle 'rizzatti/dash.vim'
+
 call neobundle#end()
 
 " Required:
@@ -197,6 +200,9 @@ let g:Tex_FormatDependency_pdf = 'dvi,pdf'
 
 " ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Dash
+nmap <silent> <leader>d <Plug>DashSearch
 
 " Ruby
 set tags+=gems.tags
