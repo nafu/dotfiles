@@ -13,6 +13,7 @@ apps=(
     wget
     awscli
     ack
+    the_silver_searcher
 )
 
 brew install "${apps[@]}"
