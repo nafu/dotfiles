@@ -5,6 +5,8 @@ set autoindent
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+" For proper backspace behaviour
+set backspace=indent,eol,start
 " For GoshREPL
 " vmap <CR> <Plug>(gosh_repl_send_block)
 " This command is for scheme
