@@ -150,7 +150,7 @@ map <Leader>p <C-^>
 " quickrun
 let g:quickrun_config = {}
 
-let g:quickrun_config._ = {'runner': 'vimproc', 'split': ''}
+let g:quickrun_config._ = {'runner': 'vimproc', 'split': '', 'runner/vimproc/updatetime': 10}
 set splitbelow
 
 " with bundler
