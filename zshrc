@@ -69,6 +69,8 @@ bindkey -e
 #bindkey '^p' history-beginning-search-backward
 #bindkey '^n' history-beginning-search-forward
 
+# load our own completion functions
+fpath=(~/.zsh/completion /usr/local/share/zsh/site-functions $fpath)
 # 補完システムを利用：補完の挙動が分かりやすくなる２つの設定のみ記述
 zstyle ':completion:*' format '%BCompleting %d%b'
 zstyle ':completion:*' group-name ''
