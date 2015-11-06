@@ -16,7 +16,7 @@ rm -r ~/.zsh
 ln -sfv ~/dotfiles/zsh ~/.zsh
 
 # vim
-ln -sfv ~/dotfiles/_vimrc ~/.vimrc
+ln -sfv ~/dotfiles/vimrc ~/.vimrc
 # Use below if you don't want to delete old .vim
 # mv ~/.vim ~/.vim.`date '+%Y%m%d'`
 rm -r ~/.vim

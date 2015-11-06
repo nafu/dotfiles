@@ -110,6 +110,9 @@ NeoBundle 'vim-scripts/YankRing.vim'
 " WakaTime
 NeoBundle 'wakatime/vim-wakatime'
 
+" Slack
+NeoBundle 'agatan/vim-vlack'
+
 " ack
 NeoBundle 'mileszs/ack.vim'
 
@@ -128,7 +131,7 @@ NeoBundleCheck
 " unite
 nnoremap [unite]    <Nop>
 nmap     <Space>u [unite]
-nnoremap <silent> [unite]c :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
+nnoremap <silent> [unite]c :<C-u>UniteWithCurrentDir -start-insert -buffer-name=files buffer file_mru bookmark file<CR>
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 " unite-rails
 nnoremap <silent> [unite]rc :<C-u>Unite rails/controller<CR>
@@ -200,6 +203,9 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_CompileRule_dvi = 'platex --interaction=nonstopmode $*'
 let g:Tex_CompileRule_pdf = 'dvipdfmx $*.dvi'
 let g:Tex_FormatDependency_pdf = 'dvi,pdf'
+
+" Slack
+let g:slaq_token = 'xoxp-3062595420-3062595430-9326113507-a3240f'
 
 " ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
