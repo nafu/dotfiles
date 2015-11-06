@@ -31,3 +31,6 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Don't make displays have separate Spaces
 defaults write com.apple.spaces spans-displays -bool true
+
+# Speed up Mission Control, App Expose animations
+defaults write com.apple.dock expose-animation-duration -float 0.0
