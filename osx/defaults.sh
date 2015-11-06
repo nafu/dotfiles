@@ -24,3 +24,10 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
+
+###############################################################################
+# Mission Control                                                                      #
+###############################################################################
+
+# Don't make displays have separate Spaces
+defaults write com.apple.spaces spans-displays -bool true
