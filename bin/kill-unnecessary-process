@@ -1,0 +1,2 @@
+#!/bin/sh
+ps -ax | ag PenTabletDriver | ag -v ag | awk '{print $1}' | xargs kill
