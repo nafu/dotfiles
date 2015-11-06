@@ -10,6 +10,10 @@ ln -sfv ~/dotfiles/git/.gitignore_global ~/.gitignore_global
 # zsh
 ln -sfv ~/dotfiles/zshrc ~/.zshrc
 ln -sfv ~/dotfiles/zshenv ~/.zshenv
+# Use below if you don't want to delete old .zsh
+# mv ~/.zsh ~/.zsh`date '+%Y%m%d'`
+rm -r ~/.zsh
+ln -sfv ~/dotfiles/zsh ~/.zsh
 
 # vim
 ln -sfv ~/dotfiles/_vimrc ~/.vimrc
