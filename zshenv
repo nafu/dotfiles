@@ -6,6 +6,7 @@ path=($path /usr/*/bin(N-/) /usr/local/*/bin(N-/) /var/*/bin(N-/))
 
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
+alias t='todo.sh -d ~/Dropbox/todo/todo.cfg'
 
 # リモートから起動するコマンド用の環境変数を設定（必要なら）
 export RSYNC_RSH=ssh

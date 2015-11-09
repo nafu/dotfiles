@@ -6,7 +6,6 @@ export PATH=~/dotfiles/lazy-git/bin:$PATH
 export PATH=~/dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/share/cakephp/2.1.0/lib/Cake/Console:$PATH
 # For MAMP MySQL
 # export PATH=/usr/local/bin:/usr/local/sbin:/Applications/MAMP/Library/bin:/usr/share/cakephp/2.1.0/lib/Cake/Console:~/usr/local/lazy-git/bin:$PATH
-export PATH=~/dotfiles/todo.txt-cli:$PATH
 source ~/dotfiles/todo.txt-cli/todo_completion
 export EDITOR=vim
 
@@ -57,7 +56,6 @@ mdpu () {mkdir -p "$@" && pushd "$*[-1]"}
 alias pu=pushd po=popd dirs='dirs -v'
 alias gst='git status -s | grep -n . --color=auto'
 alias mamp='/Applications/MAMP/htdocs'
-alias t='todo.sh -d ~/Dropbox/todo/todo.cfg'
 
 # Suffix aliases（起動コマンドは環境によって変更する）
 alias -s pdf=acroread dvi=xdvi
