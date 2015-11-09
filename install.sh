@@ -33,4 +33,5 @@ git submodule init
 git submodule update
 
 # todo.txt setup
+# See more: https://github.com/ginatrapani/todo.txt-cli/wiki/Tips-and-Tricks
 mkdir -p ~/Dropbox/todo
