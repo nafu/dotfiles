@@ -57,7 +57,7 @@ mdpu () {mkdir -p "$@" && pushd "$*[-1]"}
 alias pu=pushd po=popd dirs='dirs -v'
 alias gst='git status -s | grep -n . --color=auto'
 alias mamp='/Applications/MAMP/htdocs'
-alias t='todo.sh'
+alias t='todo.sh -d ~/Dropbox/todo/todo.cfg'
 
 # Suffix aliases（起動コマンドは環境によって変更する）
 alias -s pdf=acroread dvi=xdvi
