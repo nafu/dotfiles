@@ -35,3 +35,7 @@ git submodule update
 # todo.txt setup
 # See more: https://github.com/ginatrapani/todo.txt-cli/wiki/Tips-and-Tricks
 mkdir -p ~/Dropbox/todo
+# Use below if you don't want to delete old .todo.actions.d
+# mv ~/.todo.actions.d ~/.todo.actions.d`date '+%Y%m%d'`
+rm -r ~/.todo.actions.d
+ln -sfv ~/dotfiles/todo.actions.d ~/.todo.actions.d
