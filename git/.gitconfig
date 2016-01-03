@@ -43,3 +43,11 @@
 	user = nafu
 [ghi]
 	token = !security find-internet-password -a nafu -s github.com -l 'ghi token' -w
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = false
