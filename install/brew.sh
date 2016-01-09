@@ -14,6 +14,9 @@ apps=(
     awscli
     ack
     the_silver_searcher
+    # ruby
+    rbenv
+    ruby-build
 )
 
 brew install "${apps[@]}"
