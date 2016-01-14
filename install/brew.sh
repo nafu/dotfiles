@@ -17,6 +17,8 @@ apps=(
     # ruby
     rbenv
     ruby-build
+    # database
+    pg
 )
 
 brew install "${apps[@]}"
