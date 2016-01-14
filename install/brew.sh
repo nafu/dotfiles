@@ -18,7 +18,7 @@ apps=(
     rbenv
     ruby-build
     # database
-    pg
+    postgresql
     redis
 )
 
