@@ -19,6 +19,7 @@ apps=(
     ruby-build
     # database
     pg
+    redis
 )
 
 brew install "${apps[@]}"
