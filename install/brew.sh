@@ -20,6 +20,7 @@ apps=(
     # database
     postgresql
     redis
+    heroku-toolbelt
 )
 
 brew install "${apps[@]}"
