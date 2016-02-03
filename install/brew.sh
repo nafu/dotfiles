@@ -21,6 +21,8 @@ apps=(
   postgresql
   redis
   heroku-toolbelt
+  # NTFS
+  homebrew/fuse/ntfs-3g
 )
 
 brew install "${apps[@]}"
