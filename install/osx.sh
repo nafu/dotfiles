@@ -4,7 +4,7 @@
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap caskroom/cask
-brew install brew-cask
+brew install caskroom/cask/brew-cask
 brew tap homebrew/versions
 brew tap caskroom/versions
 
