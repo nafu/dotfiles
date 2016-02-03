@@ -24,3 +24,11 @@ apps=(
 )
 
 brew install "${apps[@]}"
+
+# Install by using cask
+
+apps=(
+  osxfuse
+)
+
+brew cask install "${apps[@]}"
