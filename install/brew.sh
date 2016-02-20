@@ -34,3 +34,7 @@ apps=(
 )
 
 brew cask install "${apps[@]}"
+
+# Heroku
+heroku plugins:install https://github.com/heroku/heroku-accounts.git
+heroku accounts:add personal
