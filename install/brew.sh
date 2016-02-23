@@ -23,6 +23,8 @@ apps=(
   heroku-toolbelt
   # NTFS
   homebrew/fuse/ntfs-3g
+  # node.js
+  node
 )
 
 brew install "${apps[@]}"
