@@ -25,6 +25,8 @@ apps=(
   homebrew/fuse/ntfs-3g
   # node.js
   node
+  # AWS
+  ec2-api-tools
 )
 
 brew install "${apps[@]}"
