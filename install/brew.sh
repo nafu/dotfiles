@@ -35,6 +35,8 @@ brew install "${apps[@]}"
 
 apps=(
   osxfuse
+  # To install ebook-convert and generate pdf and ebook for gitbook
+  calibre
 )
 
 brew cask install "${apps[@]}"
