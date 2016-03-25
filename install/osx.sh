@@ -11,3 +11,7 @@ brew tap caskroom/versions
 # Install brew & brew-cask packages
 
 . install/brew.sh
+
+# Install npm packages
+
+. install/npm.sh
