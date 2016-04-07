@@ -34,3 +34,10 @@ defaults write com.apple.spaces spans-displays -bool true
 
 # Speed up Mission Control, App Expose animations
 defaults write com.apple.dock expose-animation-duration -float 0.0
+
+###############################################################################
+# Terminal
+###############################################################################
+
+# Set keyboard shortcuts
+. osx/keyboard_shortcuts.sh
