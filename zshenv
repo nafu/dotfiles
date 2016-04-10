@@ -16,3 +16,7 @@ export EDITOR=vim
 # リモートから起動するコマンド用の環境変数を設定（必要なら）
 export RSYNC_RSH=ssh
 export CVS_RSH=ssh
+
+# Prevent to load /etc
+# El Capitan automatically creates /etc/zprofile
+setopt no_global_rcs
