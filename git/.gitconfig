@@ -1,6 +1,7 @@
 [user]
 	name = Fumiya Nakamura
 	email = nakamurafumiya003@gmail.com
+	signingkey = 8B42F0F7
 [alias]
 	st = status
 	co = checkout
