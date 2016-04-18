@@ -37,6 +37,8 @@ apps=(
   osxfuse
   # To install ebook-convert and generate pdf and ebook for gitbook
   calibre
+  # Install Java8
+  java
 )
 
 brew cask install "${apps[@]}"
