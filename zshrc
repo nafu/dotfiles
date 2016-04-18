@@ -12,6 +12,9 @@ export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+# Java
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
 # Android dev tools
 export ANDROID_HOME=~/Documents/Develop/android/android-sdk-macosx
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
