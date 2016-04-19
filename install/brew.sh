@@ -27,6 +27,8 @@ apps=(
   node
   # AWS
   ec2-api-tools
+  # CI
+  bitrise
 )
 
 brew install "${apps[@]}"
