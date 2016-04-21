@@ -127,6 +127,9 @@ NeoBundle 'rizzatti/dash.vim'
 " Evernote
 NeoBundle 'kakkyz81/evervim'
 
+" Vim Window
+NeoBundle 'kana/vim-submode'
+
 call neobundle#end()
 
 " Required:
