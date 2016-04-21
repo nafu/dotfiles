@@ -8,6 +8,9 @@ path=($path /usr/*/bin(N-/) /usr/local/*/bin(N-/) /var/*/bin(N-/) /usr/sbin(N-/)
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
 
+# pyenv
+eval "$(pyenv init -)"
+
 # todo.txt
 export PATH=~/dotfiles/todo.txt-cli:$PATH
 source ~/dotfiles/todo.txt-cli/todo_completion
