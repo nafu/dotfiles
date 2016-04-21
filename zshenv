@@ -4,6 +4,7 @@ typeset -U path
 # (N-/) を付ける事で存在しなければ無視してくれる
 path=($path /usr/*/bin(N-/) /usr/local/*/bin(N-/) /var/*/bin(N-/) /usr/sbin(N-/))
 
+# rbenv
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
 
