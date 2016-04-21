@@ -5,7 +5,6 @@ typeset -U path
 path=($path /usr/*/bin(N-/) /usr/local/*/bin(N-/) /var/*/bin(N-/) /usr/sbin(N-/))
 
 # rbenv
-export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
 
 # pyenv
