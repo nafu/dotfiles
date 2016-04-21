@@ -15,3 +15,7 @@ brew tap caskroom/versions
 # Install npm packages
 
 . install/npm.sh
+
+# Install python packages with pip
+
+. install/pip.sh
