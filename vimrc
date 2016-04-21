@@ -242,3 +242,8 @@ command!
 
 " マッピング
 nmap <Space>y :<C-U>OpenYard <C-R><C-W><CR>
+
+" Local config
+if filereadable("~/.vimrc.local")
+  source ~/.vimrc.local
+end
