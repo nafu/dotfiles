@@ -287,6 +287,6 @@ call submode#map('bufmove', 'n', '', '+', '<C-w>+')
 call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 
 " Local config
-if filereadable("~/.vimrc.local")
+if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
-end
+endif
