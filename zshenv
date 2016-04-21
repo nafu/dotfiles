@@ -2,7 +2,7 @@ limit coredumpsize 0
 #Setup command search path
 typeset -U path
 # (N-/) を付ける事で存在しなければ無視してくれる
-path=($path /usr/*/bin(N-/) /usr/local/*/bin(N-/) /var/*/bin(N-/))
+path=($path /usr/*/bin(N-/) /usr/local/*/bin(N-/) /var/*/bin(N-/) /usr/sbin(N-/))
 
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
