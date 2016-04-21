@@ -246,6 +246,9 @@ command!
 " マッピング
 nmap <Space>y :<C-U>OpenYard <C-R><C-W><CR>
 
+" For English keyboard
+noremap ; :
+
 " Easily move between splitted windows
 nnoremap s <Nop>
 nnoremap sj <C-w>j
