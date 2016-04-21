@@ -41,6 +41,8 @@ apps=(
   calibre
   # Install Java8
   java
+  # Docker
+  dockertoolbox
 )
 
 brew cask install "${apps[@]}"
