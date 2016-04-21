@@ -124,6 +124,9 @@ NeoBundle 'mileszs/ack.vim'
 " Dash
 NeoBundle 'rizzatti/dash.vim'
 
+" Evernote
+NeoBundle 'kakkyz81/evervim'
+
 call neobundle#end()
 
 " Required:
