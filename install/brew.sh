@@ -45,6 +45,9 @@ apps=(
 
 brew cask install "${apps[@]}"
 
+# Java
+launchctl setenv JAVA8_HOME `/usr/libexec/java_home -v 1.8`
+
 # Heroku
 heroku plugins:install https://github.com/heroku/heroku-accounts.git
 heroku accounts:add personal
