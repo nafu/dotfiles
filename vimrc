@@ -130,6 +130,9 @@ NeoBundle 'kakkyz81/evervim'
 " Vim Window
 NeoBundle 'kana/vim-submode'
 
+" Repl
+NeoBundle 'ujihisa/repl.vim'
+
 call neobundle#end()
 
 " Required:
