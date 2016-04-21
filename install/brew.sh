@@ -29,6 +29,8 @@ apps=(
   ec2-api-tools
   # CI
   bitrise
+  # Python
+  pyenv
 )
 
 brew install "${apps[@]}"
