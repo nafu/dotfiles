@@ -31,6 +31,8 @@ apps=(
   bitrise
   # Python
   pyenv
+  # GIF
+  gifsicle
 )
 
 brew install "${apps[@]}"
