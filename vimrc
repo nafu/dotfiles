@@ -298,6 +298,7 @@ nnoremap <silent> ,ec :<C-u>EvervimOpenClient<CR>
 nnoremap ,es :<C-u>EvervimSearchByQuery<SPACE>
 nnoremap <silent> ,et :<C-u>EvervimSearchByQuery<SPACE>tag:todo -tag:done -tag:someday<CR>
 nnoremap <silent> ,eta :<C-u>EvervimSearchByQuery<SPACE>tag:todo -tag:done<CR>
+let g:evervim_asyncupdate='1'
 let g:evervim_splitoption=''
 " ------------------------ }}}
 
