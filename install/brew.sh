@@ -45,6 +45,8 @@ apps=(
   calibre
   # Install Java8
   java
+  # Android
+  android-studio
   # Docker
   dockertoolbox
 )
