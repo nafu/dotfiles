@@ -19,3 +19,7 @@ brew tap caskroom/versions
 # Install python packages with pip
 
 . install/pip.sh
+
+# Install haskell packages with cabal
+
+. install/cabal.sh
