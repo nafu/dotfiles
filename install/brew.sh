@@ -33,6 +33,13 @@ apps=(
   pyenv
   # GIF
   gifsicle
+  # Dirt and Haskell (Dependencies of Tidal)
+  liblo
+  libsndfile
+  libsamplerate
+  jack
+  ghc
+  cabal-install
 )
 
 brew install "${apps[@]}"
