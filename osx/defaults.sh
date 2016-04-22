@@ -36,3 +36,10 @@ defaults write com.apple.spaces spans-displays -bool true
 
 # Speed up Mission Control, App Expose animations
 defaults write com.apple.dock expose-animation-duration -float 0.0
+
+###############################################################################
+# Keyboard                                                                    #
+###############################################################################
+
+# Disabling press-and-hold for special keys in favor of key repeat
+defaults write -g ApplePressAndHoldEnabled -bool false
