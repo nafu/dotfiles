@@ -133,6 +133,9 @@ NeoBundle 'kana/vim-submode'
 " Repl
 NeoBundle 'ujihisa/repl.vim'
 
+" Tidal
+NeoBundle 'munshkr/vim-tidal'
+
 call neobundle#end()
 
 " Required:
@@ -301,6 +304,9 @@ nnoremap <silent> ,eta :<C-u>EvervimSearchByQuery<SPACE>tag:todo -tag:done<CR>
 let g:evervim_asyncupdate='1'
 let g:evervim_splitoption=''
 " ------------------------ }}}
+
+" Tidal
+let maplocalleader=","
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
