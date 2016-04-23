@@ -18,3 +18,6 @@ if [ ! -d "$DIRT_DIR" ]; then
   make clean; make
   popd
 fi
+
+# OS X users: On OS X with GHC 7.10 it is necessary to reinstall PortMidi again with frameworks correctly linked:
+cabal install portmidi --ghc-options="-optl-Wl,-framework,CoreMIDI,-framework,CoreAudio" --reinstall --jobs=1 --force-reinstalls
