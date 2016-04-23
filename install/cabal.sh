@@ -21,3 +21,9 @@ fi
 
 # OS X users: On OS X with GHC 7.10 it is necessary to reinstall PortMidi again with frameworks correctly linked:
 cabal install portmidi --ghc-options="-optl-Wl,-framework,CoreMIDI,-framework,CoreAudio" --reinstall --jobs=1 --force-reinstalls
+
+if ! command -v tidalvim >/dev/null; then
+  pushd ~/.vim/bundle/vim-tidal
+  sudo make install
+  popd
+fi
