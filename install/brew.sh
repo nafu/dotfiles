@@ -14,6 +14,8 @@ apps=(
   awscli
   ack
   the_silver_searcher
+  # Terminal
+  tmux
   # ruby
   rbenv
   ruby-build
