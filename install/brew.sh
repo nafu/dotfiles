@@ -42,6 +42,8 @@ apps=(
   jack
   ghc
   cabal-install
+  # pbcopy with Tmux
+  reattach-to-user-namespace
 )
 
 brew install "${apps[@]}"
