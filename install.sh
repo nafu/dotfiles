@@ -22,6 +22,9 @@ ln -sfv ~/dotfiles/vimrc ~/.vimrc
 rm -r ~/.vim
 ln -sfv ~/dotfiles/vimfiles ~/.vim
 
+# tmux
+ln -sfv ~/dotfiles/tmux.conf ~/.tmux.conf
+
 if [ "$(uname)" == "Darwin" ]; then
     if [ -f "install/osx.sh" ]; then
         . "install/osx.sh"
