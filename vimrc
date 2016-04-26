@@ -26,6 +26,9 @@ augroup END
 nnoremap <C-k> k:call search ("^". matchstr (getline (line (".")+ 1), '\(\s*\)') ."\\S", 'b')<CR>^
 nnoremap <C-j> :call search ("^". matchstr (getline (line (".")), '\(\s*\)') ."\\S")<CR>^
 
+" Jump back
+map <C-i> <C-o>
+
 " NeoBundle
 if has('vim_starting')
   set nocompatible               " Be iMproved
