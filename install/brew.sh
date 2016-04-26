@@ -7,6 +7,7 @@ brew upgrade
 
 apps=(
   git
+  git-lfs
   hub
   # Add --with-brewed-openssl for El Capitan. https://github.com/Homebrew/homebrew/issues/40519#issuecomment-110468872
   vim --with-brewed-openssl
