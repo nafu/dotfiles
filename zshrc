@@ -21,7 +21,9 @@ export ANDROID_HOME=~/Documents/Develop/android/android-sdk-macosx
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 
 # Set PYTHONPATH
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+# export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+# Anaconda
+export PATH=~/anaconda3/bin:$PATH
 
 # Use screen
 if [ $TERM != "screen" ]; then
