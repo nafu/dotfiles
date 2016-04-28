@@ -23,3 +23,8 @@ pip install "${apps[@]}"
 # This solves import error
 # https://github.com/pymc-devs/pymc3/issues/801
 conda install jupyter
+
+# Avoid psycopg2 image not found
+# http://stackoverflow.com/questions/16407995/psycopg2-image-not-found
+sudo ln -s /Library/PostgreSQL/9.4/lib/libssl.1.0.0.dylib /usr/local/lib
+sudo ln -s /Library/PostgreSQL/9.4/lib/libcrypto.1.0.0.dylib /usr/local/lib
