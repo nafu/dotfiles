@@ -61,8 +61,6 @@ apps=(
   android-studio
   # Docker
   dockertoolbox
-  # Graphical system installer
-  anaconda
 )
 
 brew cask install "${apps[@]}"
