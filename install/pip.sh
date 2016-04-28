@@ -1,6 +1,9 @@
 # Install anaconda
 
-pyenv install anaconda3-2.5.0
+anaconda=anaconda3-2.5.0
+
+pyenv install $anaconda
+pyenv global $anaconda
 
 # Install packages
 
