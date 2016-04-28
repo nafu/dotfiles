@@ -1,3 +1,7 @@
+# Install anaconda
+
+pyenv install anaconda3-2.5.0
+
 # Install packages
 
 apps=(
