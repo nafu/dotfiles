@@ -12,3 +12,7 @@ apps=(
 )
 
 pip install "${apps[@]}"
+
+# This solves import error
+# https://github.com/pymc-devs/pymc3/issues/801
+conda install jupyter
