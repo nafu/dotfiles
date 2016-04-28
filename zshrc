@@ -24,6 +24,7 @@ export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 # export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 # Anaconda
 export PATH=~/anaconda3/bin:$PATH
+export DYLD_FALLBACK_LIBRARY_PATH=$HOME/anaconda3/lib/:$DYLD_FALLBACK_LIBRARY_PATH
 
 # Use screen
 if [ $TERM != "screen" ]; then
