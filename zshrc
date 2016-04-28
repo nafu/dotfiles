@@ -20,11 +20,8 @@ export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
 export ANDROID_HOME=~/Documents/Develop/android/android-sdk-macosx
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 
-# Set PYTHONPATH
-# export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 # Anaconda
-export PATH=~/anaconda3/bin:$PATH
-export DYLD_FALLBACK_LIBRARY_PATH=$HOME/anaconda3/lib/:$DYLD_FALLBACK_LIBRARY_PATH
+export DYLD_FALLBACK_LIBRARY_PATH=$HOME/.pyenv/versions/$(cat ~/.pyenv/version)/lib/:$DYLD_FALLBACK_LIBRARY_PATH
 
 # Use screen
 if [ $TERM != "screen" ]; then
