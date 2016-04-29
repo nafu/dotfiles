@@ -59,6 +59,7 @@ apps=(
   java
   # Android
   android-studio
+  intel-haxm
   # Docker
   dockertoolbox
 )
