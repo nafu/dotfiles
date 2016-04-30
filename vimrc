@@ -69,6 +69,7 @@ NeoBundleLazy 'basyura/unite-rails', {
   \     'rails/stylesheet', 'rails/view'
   \   ]
   \ }}
+NeoBundle 'scrooloose/syntastic'
 
 
 " ファイルオープンを便利に
@@ -185,6 +186,9 @@ augroup NafuRSpec
   autocmd!
   autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
 augroup END
+
+"Ruby
+let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': ['ruby']}
 
 nnoremap [quickrun] <Nop>
 nmap <Space>k [quickrun]
