@@ -102,7 +102,7 @@ NeoBundle 'tyru/open-browser.vim'
 
 " Ruby向けにendを自動挿入してくれる
 " 追記する際に自動で追加されてしまう
-" NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-endwise'
 
 " コメントON/OFFを手軽に実行
 NeoBundle 'tomtom/tcomment_vim'
