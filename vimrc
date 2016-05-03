@@ -184,10 +184,15 @@ set splitbelow
 " let g:quickrun_config['ruby.rspec'] = {'command': 'rspec', 'exec': '%o %c %s', 'cmdopt': 'bundle exec'}
 " with spring
 let g:quickrun_config['ruby.rspec'] = {'command': 'bin/rspec', 'exec': '%o %c %s', 'cmdopt': ''}
+let g:quickrun_config['ruby.cucumber'] = {'command': 'bin/cucumber', 'exec': '%o %c %s', 'cmdopt': ''}
 
 augroup NafuRSpec
   autocmd!
   autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
+augroup END
+augroup NafuCucumber
+  autocmd!
+  autocmd BufWinEnter,BufNewFile *.feature set filetype=ruby.cucumber
 augroup END
 
 "Ruby
