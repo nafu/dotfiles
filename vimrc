@@ -5,6 +5,9 @@ set autoindent
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+
+nnoremap <Space>. :<C-u>tabedit $MYVIMRC<CR>
+
 " For proper backspace behaviour
 set backspace=indent,eol,start
 " For GoshREPL
