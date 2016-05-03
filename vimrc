@@ -74,6 +74,9 @@ NeoBundleLazy 'basyura/unite-rails', {
   \ }}
 NeoBundle 'scrooloose/syntastic'
 
+" Snippet
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 
 " ファイルオープンを便利に
 NeoBundle 'Shougo/unite.vim'
@@ -204,6 +207,30 @@ augroup matchit
     autocmd FileType ruby.rspec let b:match_words = '\<\(module\|class\|def\|begin\|do\|if\|unless\|case\|describe\|context\|it\)\>:\<\(elsif\|when\|rescue\)\>:\<\(else\|ensure\)\>:\<end\>'
 augroup END
 source $VIMRUNTIME/macros/matchit.vim
+"------------------------------------
+" neosnippet
+"------------------------------------
+" neosnippet "{{{
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets' behavior.
+imap <expr><TAB>
+ \ pumvisible() ? "\<C-n>" :
+ \ neosnippet#expandable_or_jumpable() ?
+ \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+ \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+" Enable snipMate compatibility feature.
+" let g:neosnippet#enable_snipmate_compatibility = 1
+"}}}
 
 nnoremap [quickrun] <Nop>
 nmap <Space>k [quickrun]
