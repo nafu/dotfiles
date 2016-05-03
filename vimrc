@@ -106,6 +106,7 @@ NeoBundle 'tyru/open-browser.vim'
 " Ruby向けにendを自動挿入してくれる
 " 追記する際に自動で追加されてしまう
 NeoBundle 'tpope/vim-endwise'
+NeoBundle 'vim-scripts/matchit.zip'
 
 " コメントON/OFFを手軽に実行
 NeoBundle 'tomtom/tcomment_vim'
@@ -197,6 +198,12 @@ augroup END
 
 "Ruby
 let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': ['ruby']}
+augroup matchit
+    autocmd!
+    autocmd FileType ruby let b:match_words = '\<\(module\|class\|def\|begin\|do\|if\|unless\|case\)\>:\<\(elsif\|when\|rescue\)\>:\<\(else\|ensure\)\>:\<end\>'
+    autocmd FileType ruby.rspec let b:match_words = '\<\(module\|class\|def\|begin\|do\|if\|unless\|case\|describe\|context\|it\)\>:\<\(elsif\|when\|rescue\)\>:\<\(else\|ensure\)\>:\<end\>'
+augroup END
+source $VIMRUNTIME/macros/matchit.vim
 
 nnoremap [quickrun] <Nop>
 nmap <Space>k [quickrun]
