@@ -59,7 +59,16 @@ NeoBundle 'tpope/vim-cucumber'
 " set tags+=.tags
 " set tags+=.Gemfile.lock.tags
 NeoBundle 'tsukkee/unite-tag'
-" NeoBundle 'alpaca-tc/alpaca_tags'
+" NeoBundleLazy 'alpaca-tc/alpaca_tags', {
+"       \ 'depends': ['Shougo/vimproc'],
+"       \ 'autoload' : {
+"       \   'commands' : [
+"       \     { 'name' : 'AlpacaTagsBundle', 'complete': 'customlist,alpaca_tags#complete_source' },
+"       \     { 'name' : 'AlpacaTagsUpdate', 'complete': 'customlist,alpaca_tags#complete_source' },
+"       \     'AlpacaTagsSet', 'AlpacaTagsCleanCache', 'AlpacaTagsEnable', 'AlpacaTagsDisable', 'AlpacaTagsKillProcess', 'AlpacaTagsProcessStatus',
+"       \ ],
+"       \ }}
+
 NeoBundleLazy 'basyura/unite-rails', {
   \ 'depends' : 'Shougo/unite.vim',
   \ 'autoload' : {
@@ -332,6 +341,36 @@ endif
 
 " Enable snipMate compatibility feature.
 " let g:neosnippet#enable_snipmate_compatibility = 1
+"}}}
+"------------------------------------
+" AlpacaTags
+"------------------------------------
+" AlpacaTags "{{{
+" let g:alpaca_tags#config = {
+"        \ '_' : '-R --sort=yes --languages=+Ruby --languages=-js,JavaScript',
+"        \ 'js' : '--languages=+js',
+"        \ '-js' : '--languages=-js,JavaScript',
+"        \ 'vim' : '--languages=+Vim,vim',
+"        \ 'php' : '--languages=+php',
+"        \ '-vim' : '--languages=-Vim,vim',
+"        \ '-style': '--languages=-css,scss,js,JavaScript,html',
+"        \ 'scss' : '--languages=+scss --languages=-css',
+"        \ 'css' : '--languages=+css',
+"        \ 'java' : '--languages=+java $JAVA_HOME/src',
+"        \ 'ruby': '--languages=+Ruby',
+"        \ 'coffee': '--languages=+coffee',
+"        \ '-coffee': '--languages=-coffee',
+"        \ 'bundle': '--languages=+Ruby',
+"        \ }
+" augroup AlpacaTags
+"   autocmd!
+"   if exists(':Tags')
+"     autocmd BufWritePost Gemfile TagsBundle
+"     autocmd BufEnter * TagsSet
+"     " 毎回保存と同時更新する場合はコメントを外す
+"     " autocmd BufWritePost * TagsUpdate
+"   endif
+" augroup END
 "}}}
 
 nnoremap [quickrun] <Nop>
