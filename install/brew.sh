@@ -45,6 +45,8 @@ apps=(
   cabal-install
   # pbcopy with Tmux
   reattach-to-user-namespace
+  # Mediamedia
+  ffmpeg
 )
 
 brew install "${apps[@]}"
