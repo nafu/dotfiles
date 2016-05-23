@@ -49,6 +49,9 @@ apps=(
   ffmpeg
   # PHP
   homebrew/php/composer
+  # Image Manipulation
+  imagemagick
+  ghostscript
 )
 
 brew install "${apps[@]}"
