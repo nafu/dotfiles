@@ -47,6 +47,8 @@ apps=(
   reattach-to-user-namespace
   # Mediamedia
   ffmpeg
+  # PHP
+  homebrew/php/composer
 )
 
 brew install "${apps[@]}"
