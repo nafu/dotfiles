@@ -54,6 +54,9 @@ apps=(
   # Image Manipulation
   imagemagick
   ghostscript
+  # Swift
+  cmake
+  ninja
 )
 
 brew install "${apps[@]}"
