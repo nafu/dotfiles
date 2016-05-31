@@ -74,6 +74,8 @@ apps=(
   intel-haxm
   # Docker
   dockertoolbox
+  # Presentation
+  keycastr
 )
 
 brew cask install "${apps[@]}"
