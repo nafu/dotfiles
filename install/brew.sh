@@ -75,6 +75,7 @@ apps=(
   # Docker
   dockertoolbox
   # Presentation
+  keycast
   keycastr
 )
 
