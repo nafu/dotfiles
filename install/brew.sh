@@ -57,6 +57,8 @@ apps=(
   # Swift
   cmake
   ninja
+  # GPG
+  gpg
 )
 
 brew install "${apps[@]}"
