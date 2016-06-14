@@ -57,6 +57,7 @@ apps=(
   # Swift
   cmake
   ninja
+  swiftlint
   # GPG
   gpg
 )
