@@ -23,3 +23,8 @@ brew tap caskroom/versions
 # Install haskell packages with cabal
 
 . install/cabal.sh
+
+# Xcode
+
+mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+ln -s xcode/Dracula.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/Dracula.dvtcolortheme
