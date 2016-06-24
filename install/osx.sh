@@ -27,4 +27,4 @@ brew tap caskroom/versions
 # Xcode
 
 mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
-ln -s xcode/Dracula.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/Dracula.dvtcolortheme
+ln -s ~/dotfiles/xcode/Dracula.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/Dracula.dvtcolortheme
