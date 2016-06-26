@@ -16,6 +16,7 @@ apps=(
   sqlalchemy
   ipython-sql
   simplejson
+  --upgrade https://storage.googleapis.com/tensorflow/mac/tensorflow-0.8.0-py3-none-any.whl
 )
 
 pip install "${apps[@]}"
