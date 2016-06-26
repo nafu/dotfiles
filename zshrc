@@ -6,6 +6,8 @@ export PATH=~/dotfiles/lazy-git/bin:$PATH
 export PATH=~/dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/share/cakephp/2.1.0/lib/Cake/Console:$PATH
 # For MAMP MySQL
 # export PATH=/usr/local/bin:/usr/local/sbin:/Applications/MAMP/Library/bin:/usr/share/cakephp/2.1.0/lib/Cake/Console:~/usr/local/lazy-git/bin:$PATH
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Go
 export GOROOT=/usr/local/opt/go/libexec
