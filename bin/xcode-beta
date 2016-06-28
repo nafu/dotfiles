@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Switch xcode version to 8 beta
+
+xcode-select --switch /Applications/Xcode-beta.app/Contents/Developer
