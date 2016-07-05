@@ -80,6 +80,8 @@ apps=(
   # Presentation
   keycast
   keycastr
+  # Xcode
+  alcatraz
 )
 
 brew cask install "${apps[@]}"
