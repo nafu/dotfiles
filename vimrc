@@ -29,6 +29,8 @@ augroup END
 nnoremap <C-k> k:call search ("^". matchstr (getline (line (".")+ 1), '\(\s*\)') ."\\S", 'b')<CR>^
 nnoremap <C-j> :call search ("^". matchstr (getline (line (".")), '\(\s*\)') ."\\S")<CR>^
 
+imap <C-/> <ESC>
+
 " Jump back
 map <C-i> <C-o>
 
