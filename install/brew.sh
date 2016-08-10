@@ -60,6 +60,8 @@ apps=(
   swiftlint
   # GPG
   gpg
+  # WP
+  wp-cli
 )
 
 brew install "${apps[@]}"
