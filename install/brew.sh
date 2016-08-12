@@ -62,6 +62,8 @@ apps=(
   gpg
   # WP
   wp-cli
+  # SVG
+  homebrew/gui/inkscape
 )
 
 brew install "${apps[@]}"
