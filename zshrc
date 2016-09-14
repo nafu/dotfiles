@@ -30,6 +30,12 @@ if [ $TERM != "screen" ]; then
         #exec screen -U -S main -xRR
 fi
 
+# rbenv
+eval "$(rbenv init -)"
+
+# pyenv
+eval "$(pyenv init -)"
+
 # Set Shell variable
 # WORDCHARS=$WORDCHARS:s,/,,
 HISTSIZE=1000 HISTFILE=~/.zhistory SAVEHIST=100000
