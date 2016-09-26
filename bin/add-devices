@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# Add devices and update provisioning profile
+#
+
+DEVICES_FILE_PATH="$1"
+shift
+BUNDLE_IDENTIFIER="$1"
+shift
+
+fastlane run register_devices devices_file:$DEVICES_FILE_PATH
+fastlane match --app_identifier "$BUNDLE_IDENTIFIER" --type "adhoc" --force_for_new_devices --git_url "git@github.com:ookamiinc/certificates.git"
