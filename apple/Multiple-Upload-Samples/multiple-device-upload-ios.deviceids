@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Device UDIDs</key>
+	<array>
+		<dict>
+			<key>deviceIdentifier</key>
+			<string>A123456789012345678901234567890123456789</string>
+			<key>deviceName</key>
+			<string>DeviceName1</string>
+		</dict>
+		<dict>
+			<key>deviceIdentifier</key>
+			<string>B123456789012345678901234567890123456789</string>
+			<key>deviceName</key>
+			<string>DeviceName2</string>
+		</dict>
+	</array>
+</dict>
+</plist>
