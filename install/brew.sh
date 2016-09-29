@@ -20,6 +20,7 @@ apps=(
   # Terminal
   tmux
   # ruby
+  gmp
   rbenv
   ruby-build
   # database
