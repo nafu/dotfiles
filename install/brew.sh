@@ -33,6 +33,7 @@ apps=(
   node
   # AWS
   ec2-api-tools
+  s3cmd
   # CI
   bitrise
   # Python
