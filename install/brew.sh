@@ -88,6 +88,8 @@ apps=(
   keycastr
   # Xcode
   alcatraz
+  # Scala
+  sbt
 )
 
 brew cask install "${apps[@]}"
