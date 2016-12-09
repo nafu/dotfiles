@@ -56,6 +56,8 @@ apps=(
   # Image Manipulation
   imagemagick
   ghostscript
+  ## Image Compression
+  pngquant
   # Swift
   cmake
   ninja
