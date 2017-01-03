@@ -6,6 +6,8 @@ apps=(
   firebase-tools
   # Redux
   redux-cli
+  # Git stats
+  git-stats
 )
 
 npm install -g "${apps[@]}"
