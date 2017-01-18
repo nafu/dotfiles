@@ -34,6 +34,7 @@ apps=(
   # AWS
   ec2-api-tools
   s3cmd
+  awsebcli
   # CI
   bitrise
   # Python
