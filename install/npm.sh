@@ -8,6 +8,9 @@ apps=(
   redux-cli
   # Git stats
   git-stats
+  # Google Apps Script
+  # https://github.com/danthareja/node-google-apps-script
+  node-google-apps-script
 )
 
 npm install -g "${apps[@]}"
