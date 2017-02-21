@@ -11,6 +11,8 @@ apps=(
   # Google Apps Script
   # https://github.com/danthareja/node-google-apps-script
   node-google-apps-script
+  # AWS Serverless
+  serverless
 )
 
 npm install -g "${apps[@]}"
