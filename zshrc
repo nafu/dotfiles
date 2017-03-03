@@ -68,6 +68,7 @@ alias gst='git status -s | grep -n . --color=auto'
 alias mamp='/Applications/MAMP/htdocs'
 ## Ruby
 alias bi='bundle install'
+alias bu='bundle update'
 alias be='bundle exec'
 
 # Suffix aliases（起動コマンドは環境によって変更する）
