@@ -71,6 +71,8 @@ apps=(
   homebrew/gui/inkscape
   # Javascript
   yarn
+  # Vim
+  ctags
 )
 
 brew install "${apps[@]}"
