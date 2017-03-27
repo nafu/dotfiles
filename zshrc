@@ -65,6 +65,7 @@ mdcd () {mkdir -p "$@" && cd "$*[-1]"}
 mdpu () {mkdir -p "$@" && pushd "$*[-1]"}
 alias pu=pushd po=popd dirs='dirs -v'
 alias gst='git status -s | grep -n . --color=auto'
+alias hb='hub browse'
 alias mamp='/Applications/MAMP/htdocs'
 ## Ruby
 alias bi='bundle install'
