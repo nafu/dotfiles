@@ -73,6 +73,8 @@ apps=(
   yarn
   # Vim
   ctags
+  # Morphological analysis
+  jumanpp
 )
 
 brew install "${apps[@]}"
