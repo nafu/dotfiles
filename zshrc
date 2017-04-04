@@ -71,6 +71,33 @@ alias mamp='/Applications/MAMP/htdocs'
 alias bi='bundle install'
 alias bu='bundle update'
 alias be='bundle exec'
+##
+## Git
+##
+## I tried to prepare zsh completion for lazy-git commands,
+## but it doesn't seem to work correctly.
+## Using alias is better way because completion works correctly. 🚀
+##
+## Ref.
+## https://github.com/zsh-users/zsh-completions/blob/master/zsh-completions-howto.org
+## http://stackoverflow.com/questions/8260398/adding-new-zshell-command-line-custom-git-completions
+##
+alias b='git branch -a'
+alias ch='git cherry -v'
+alias cm='(){ git commit -m "$*" }'
+alias d='git diff'
+alias dca='git diff --cached'
+alias dh='git diff HEAD'
+alias gb='git branch'
+alias gc='git clone'
+alias gco='git checkout'
+alias gl='git log'
+alias pr='hub pull-request'
+alias st='git status -s'
+alias ush='git push origin'
+alias ull='git pull origin'
+alias track='git update-index --no-assume-unchanged'
+alias untrack='git update-index --assume-unchanged'
 
 # Suffix aliases（起動コマンドは環境によって変更する）
 alias -s pdf=acroread dvi=xdvi
