@@ -59,6 +59,8 @@ apps=(
   ghostscript
   ## Image Compression
   pngquant
+  ## Graphviz
+  graphviz
   # Swift
   cmake
   ninja
