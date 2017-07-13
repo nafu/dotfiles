@@ -159,6 +159,9 @@ NeoBundle 'ujihisa/repl.vim'
 " Tidal
 NeoBundle 'munshkr/vim-tidal'
 
+" Align
+NeoBundle 'junegunn/vim-easy-align'
+
 call neobundle#end()
 
 " Required:
@@ -494,6 +497,10 @@ let g:evervim_splitoption=''
 
 " Tidal
 let maplocalleader=","
+
+" Align
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
