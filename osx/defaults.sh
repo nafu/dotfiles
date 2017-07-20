@@ -43,3 +43,10 @@ defaults write com.apple.dock expose-animation-duration -float 0.0
 
 # Disabling press-and-hold for special keys in favor of key repeat
 defaults write -g ApplePressAndHoldEnabled -bool false
+
+###############################################################################
+# Xcode                                                                       #
+###############################################################################
+
+# Show build operation duration on Xcode
+defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
