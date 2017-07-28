@@ -77,6 +77,9 @@ apps=(
   ctags
   # Morphological analysis
   jumanpp
+  # GNU coreutils for gsort with -h option
+  # https://unix.stackexchange.com/questions/4681/how-do-you-sort-du-output-by-size
+  coreutils
 )
 
 brew install "${apps[@]}"
