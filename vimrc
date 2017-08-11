@@ -31,6 +31,10 @@ nnoremap <C-j> :call search ("^". matchstr (getline (line (".")), '\(\s*\)') ."\
 
 imap <C-/> <ESC>
 
+" Replace selected text
+" https://stackoverflow.com/questions/676600/vim-search-and-replace-selected-text
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 " Jump back
 map <C-i> <C-o>
 
