@@ -96,7 +96,7 @@ apps=(
   android-studio
   intel-haxm
   # Docker
-  dockertoolbox
+  docker
   # Presentation
   keycast
   keycastr
