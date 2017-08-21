@@ -111,6 +111,12 @@ apps=(
 
 brew cask install "${apps[@]}"
 
+# Other packages
+
+## Codeclimate
+brew tap codeclimate/formulae
+brew install codeclimate
+
 # Java
 launchctl setenv JAVA8_HOME `/usr/libexec/java_home -v 1.8`
 
