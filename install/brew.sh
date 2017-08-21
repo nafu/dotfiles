@@ -117,9 +117,11 @@ brew cask install "${apps[@]}"
 brew tap codeclimate/formulae
 brew install codeclimate
 
-# Java
+# Initial setup
+
+## Java
 launchctl setenv JAVA8_HOME `/usr/libexec/java_home -v 1.8`
 
-# Heroku
+## Heroku
 heroku plugins:install heroku-accounts
 heroku accounts:add personal
