@@ -24,6 +24,10 @@ brew tap caskroom/versions
 
 . install/cabal.sh
 
+# Install docker images
+
+. install/docker.sh
+
 # Xcode
 
 mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
