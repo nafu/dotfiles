@@ -180,6 +180,8 @@ nnoremap [unite]    <Nop>
 nmap     <Space>u [unite]
 nnoremap <silent> [unite]c :<C-u>UniteWithCurrentDir -start-insert -buffer-name=files buffer file_mru bookmark file<CR>
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+" Files inside directory containing file ('head')
+nnoremap <silent> [unite]f :<C-u>:Unite file_rec:`expand('%:p:h')`<CR>
 " unite-rails
 nnoremap <silent> [unite]rc :<C-u>Unite rails/controller<CR>
 nnoremap <silent> [unite]rm :<C-u>Unite rails/model<CR>
