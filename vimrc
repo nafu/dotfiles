@@ -193,7 +193,7 @@ nnoremap <silent> [unite]rr :<C-u>Unite rails/route<CR>
 nnoremap <silent> [unite]rg :<C-u>Unite rails/gemfile<CR>
 nnoremap <silent> [unite]rp :<C-u>Unite rails/spec<CR>
 nnoremap <silent> [unite]rf :<C-u>Unite rails/features<CR>
-nnoremap <silent> [unite]rse :<C-u>Unite rails/serializer<CR>
+nnoremap <silent> [unite]rse :<C-u>Unite file:app/serializers<CR>
 
 " Go to previous file
 let mapleader = ","
