@@ -195,6 +195,25 @@ nnoremap <silent> [unite]rp :<C-u>Unite rails/spec<CR>
 nnoremap <silent> [unite]rf :<C-u>Unite rails/features<CR>
 nnoremap <silent> [unite]rse :<C-u>Unite file:app/serializers<CR>
 
+" Unite for fastlane
+nnoremap <silent> [unite]ffc :<C-u>Unite file_rec:./fastlane_core/lib/fastlane_core<CR>
+nnoremap <silent> [unite]ff :<C-u>Unite file_rec:./fastlane/lib/fastlane<CR>
+nnoremap <silent> [unite]ffr :<C-u>Unite file_rec:./frameit/lib/frameit<CR>
+nnoremap <silent> [unite]fpe :<C-u>Unite file_rec:./pem/lib/pem<CR>
+nnoremap <silent> [unite]fpi :<C-u>Unite file_rec:./pilot/lib/pilot<CR>
+nnoremap <silent> [unite]fpre :<C-u>Unite file_rec:./precheck/lib/precheck<CR>
+nnoremap <silent> [unite]fpro :<C-u>Unite file_rec:./produce/lib/produce<CR>
+nnoremap <silent> [unite]fm :<C-u>Unite file_rec:./match/lib/match<CR>
+nnoremap <silent> [unite]fsca :<C-u>Unite file_rec:./scan/lib/scan<CR>
+nnoremap <silent> [unite]fscr :<C-u>Unite file_rec:./screengrab/lib/screengrab<CR>
+nnoremap <silent> [unite]fsi :<C-u>Unite file_rec:./sigh/lib/sigh<CR>
+nnoremap <silent> [unite]fsn :<C-u>Unite file_rec:./snapshot/lib/snapshot<CR>
+nnoremap <silent> [unite]fsp :<C-u>Unite file_rec:./spaceship/lib/spaceship<CR>
+nnoremap <silent> [unite]fsu :<C-u>Unite file_rec:./supply/lib/supply<CR>
+nnoremap <silent> [unite]fg :<C-u>Unite file_rec:./gym/lib/gym<CR>
+nnoremap <silent> [unite]fc :<C-u>Unite file_rec:./cert/lib/cert<CR>
+nnoremap <silent> [unite]fd :<C-u>Unite file_rec:./deliver/lib/deliver<CR>
+
 " Go to previous file
 let mapleader = ","
 map <Leader>p <C-^>
