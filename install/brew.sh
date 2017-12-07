@@ -107,6 +107,8 @@ apps=(
   # Asset Catalog Thinkerer to open .car files
   # https://github.com/insidegui/AssetCatalogTinkerer
   asset-catalog-tinkerer
+  # Markdown Editor
+  macdown
 )
 
 brew cask install "${apps[@]}"
