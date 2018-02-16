@@ -119,6 +119,10 @@ brew cask install "${apps[@]}"
 brew tap codeclimate/formulae
 brew install codeclimate
 
+## iOS
+brew tap yonaskolb/XcodeGen https://github.com/yonaskolb/XcodeGen.git
+brew install XcodeGen
+
 # Initial setup
 
 ## Java
