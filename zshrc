@@ -148,7 +148,7 @@ function show-git-current-branch {
         echo "$color$name$action%f%b "
 }
 
-PROMPT='%B%~%b `show-git-current-branch` %# '
+PROMPT='%B%~%b `show-git-current-branch` %(?..[%F{red}%?%f%b] )%# '
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
