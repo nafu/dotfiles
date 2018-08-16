@@ -187,13 +187,16 @@ nnoremap <silent> [unite]rc :<C-u>Unite rails/controller<CR>
 nnoremap <silent> [unite]rm :<C-u>Unite rails/model<CR>
 nnoremap <silent> [unite]rv :<C-u>Unite rails/view<CR>
 nnoremap <silent> [unite]rh :<C-u>Unite rails/helper<CR>
-nnoremap <silent> [unite]rs :<C-u>Unite rails/stylesheet<CR>
+nnoremap <silent> [unite]rst :<C-u>Unite rails/stylesheet<CR>
 nnoremap <silent> [unite]rj :<C-u>Unite rails/javascript<CR>
 nnoremap <silent> [unite]rr :<C-u>Unite rails/route<CR>
 nnoremap <silent> [unite]rg :<C-u>Unite rails/gemfile<CR>
 nnoremap <silent> [unite]rp :<C-u>Unite rails/spec<CR>
 nnoremap <silent> [unite]rf :<C-u>Unite rails/features<CR>
 nnoremap <silent> [unite]rse :<C-u>Unite file:app/serializers<CR>
+nnoremap <silent> [unite]rs :<C-u>Unite file:app/services<CR>
+nnoremap <silent> [unite]ru :<C-u>Unite file:app/uploaders<CR>
+nnoremap <silent> [unite]rp :<C-u>Unite file:app/preloaders<CR>
 
 " Unite for fastlane
 nnoremap <silent> [unite]ffc :<C-u>Unite file_rec:./fastlane_core/lib/fastlane_core<CR>
