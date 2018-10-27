@@ -197,7 +197,7 @@ nnoremap <silent> [unite]rf :<C-u>Unite rails/features<CR>
 nnoremap <silent> [unite]rse :<C-u>Unite file:app/serializers<CR>
 nnoremap <silent> [unite]rs :<C-u>Unite file:app/services<CR>
 nnoremap <silent> [unite]ru :<C-u>Unite file:app/uploaders<CR>
-nnoremap <silent> [unite]rp :<C-u>Unite file:app/preloaders<CR>
+nnoremap <silent> [unite]rpr :<C-u>Unite file:app/preloaders<CR>
 
 " Unite for fastlane
 nnoremap <silent> [unite]ffc :<C-u>Unite file_rec:./fastlane_core/lib/fastlane_core<CR>
