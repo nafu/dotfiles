@@ -189,6 +189,7 @@ nnoremap <silent> [unite]rv :<C-u>Unite rails/view<CR>
 nnoremap <silent> [unite]rh :<C-u>Unite rails/helper<CR>
 nnoremap <silent> [unite]rst :<C-u>Unite rails/stylesheet<CR>
 nnoremap <silent> [unite]rj :<C-u>Unite rails/javascript<CR>
+nnoremap <silent> [unite]rjo :<C-u>Unite file:app/jobs<CR>
 nnoremap <silent> [unite]rr :<C-u>Unite rails/route<CR>
 nnoremap <silent> [unite]rg :<C-u>Unite rails/gemfile<CR>
 nnoremap <silent> [unite]rp :<C-u>Unite rails/spec<CR>
