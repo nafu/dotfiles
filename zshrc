@@ -192,3 +192,7 @@ alias pg="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.lo
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
+
+# nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh

@@ -31,6 +31,7 @@ apps=(
   homebrew/fuse/ntfs-3g
   # node.js
   node
+  nvm
   # AWS
   ec2-api-tools
   s3cmd

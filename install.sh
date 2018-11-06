@@ -23,6 +23,9 @@ ln -sfv ~/dotfiles/vimrc ~/.xvimrc
 rm -r ~/.vim
 ln -sfv ~/dotfiles/vimfiles ~/.vim
 
+# nvm
+mkdir ~/.nvm
+
 # tmux
 ln -sfv ~/dotfiles/tmux.conf ~/.tmux.conf
 
