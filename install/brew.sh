@@ -3,6 +3,9 @@
 brew update
 brew upgrade
 
+# Requirement for ntfs-3g
+brew cask install osxfuse
+
 # Install packages
 
 apps=(
@@ -26,9 +29,9 @@ apps=(
   # database
   postgresql
   redis
-  heroku-toolbelt
+  heroku/brew/heroku
   # NTFS
-  homebrew/fuse/ntfs-3g
+  ntfs-3g
   # node.js
   node
   nvm
@@ -54,7 +57,7 @@ apps=(
   # Mediamedia
   ffmpeg
   # PHP
-  homebrew/php/composer
+  composer
   # Image Manipulation
   imagemagick
   ghostscript
@@ -70,8 +73,6 @@ apps=(
   gpg
   # WP
   wp-cli
-  # SVG
-  homebrew/gui/inkscape
   # Javascript
   yarn
   # Vim
@@ -88,7 +89,8 @@ brew install "${apps[@]}"
 # Install by using cask
 
 apps=(
-  osxfuse
+  # SVG
+  inkscape
   # To install ebook-convert and generate pdf and ebook for gitbook
   calibre
   # Install Java8
