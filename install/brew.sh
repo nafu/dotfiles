@@ -86,6 +86,8 @@ apps=(
   # GNU coreutils for gsort with -h option
   # https://unix.stackexchange.com/questions/4681/how-do-you-sort-du-output-by-size
   coreutils
+  # Scala
+  sbt
 )
 
 brew install "${apps[@]}"
@@ -107,8 +109,6 @@ apps=(
   keycastr
   # Xcode
   alcatraz
-  # Scala
-  sbt
   # Asset Catalog Thinkerer to open .car files
   # https://github.com/insidegui/AssetCatalogTinkerer
   asset-catalog-tinkerer
