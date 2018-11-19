@@ -126,9 +126,6 @@ brew install codeclimate
 brew tap yonaskolb/XcodeGen https://github.com/yonaskolb/XcodeGen.git
 brew install XcodeGen
 
-brew tap xcodeswift/sake git@github.com:xcodeswift/sake.git
-brew install sake
-
 # Initial setup
 
 ## Java
