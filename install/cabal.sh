@@ -20,7 +20,7 @@ if [ ! -d "$DIRT_DIR" ]; then
 fi
 
 # OS X users: On OS X with GHC 7.10 it is necessary to reinstall PortMidi again with frameworks correctly linked:
-cabal install portmidi --ghc-options="-optl-Wl,-framework,CoreMIDI,-framework,CoreAudio" --reinstall --jobs=1 --force-reinstalls
+cabal install PortMidi --ghc-options="-optl-Wl,-framework,CoreMIDI,-framework,CoreAudio" --reinstall --jobs=1 --force-reinstalls
 
 if ! command -v tidalvim >/dev/null; then
   pushd ~/.vim/bundle/vim-tidal
