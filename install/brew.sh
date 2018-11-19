@@ -95,6 +95,8 @@ brew install "${apps[@]}"
 # Install by using cask
 
 apps=(
+  # Requirement for inkscape
+  xquartz
   # SVG
   inkscape
   # To install ebook-convert and generate pdf and ebook for gitbook
