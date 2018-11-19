@@ -3,8 +3,12 @@
 brew update
 brew upgrade
 
-# Requirement for ntfs-3g
+# Requirements
+
+## ntfs-3g
 brew cask install osxfuse
+## ec2-api-tools
+brew cask install java
 
 # Install packages
 
@@ -93,8 +97,6 @@ apps=(
   inkscape
   # To install ebook-convert and generate pdf and ebook for gitbook
   calibre
-  # Install Java8
-  java
   # Android
   android-studio
   intel-haxm
