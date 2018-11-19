@@ -15,7 +15,10 @@ brew cask install java
 apps=(
   git
   git-lfs
+  # GitHub
+  ghq
   hub
+  peco
   # Required to use neocomplete.vim
   lua
   # Add --with-brewed-openssl for El Capitan. https://github.com/Homebrew/homebrew/issues/40519#issuecomment-110468872
