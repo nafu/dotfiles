@@ -98,6 +98,9 @@ alias ush='git push origin'
 alias ull='git pull origin'
 alias track='git update-index --no-assume-unchanged'
 alias untrack='git update-index --assume-unchanged'
+## ghq with peco
+alias g='cd $(ghq root)/$(ghq list | peco)'
+alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 
 # Suffix aliases（起動コマンドは環境によって変更する）
 alias -s pdf=acroread dvi=xdvi
