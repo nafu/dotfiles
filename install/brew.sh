@@ -121,6 +121,8 @@ apps=(
   asset-catalog-tinkerer
   # Markdown Editor
   macdown
+  # Mac
+  spectacle
 )
 
 brew cask install "${apps[@]}"
