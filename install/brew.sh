@@ -88,6 +88,8 @@ apps=(
   coreutils
   # Scala
   sbt
+  # Go
+  golang
 )
 
 brew install "${apps[@]}"
