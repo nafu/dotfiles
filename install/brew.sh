@@ -119,7 +119,10 @@ apps=(
   # Asset Catalog Thinkerer to open .car files
   # https://github.com/insidegui/AssetCatalogTinkerer
   asset-catalog-tinkerer
-  # Markdown Editor
+  # Editor
+  ## Text Editor
+  coteditor
+  ## Markdown Editor
   macdown
   # Mac
   spectacle
