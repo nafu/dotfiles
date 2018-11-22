@@ -180,17 +180,17 @@ nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 " Files inside directory containing file ('head')
 nnoremap <silent> [unite]f :<C-u>:Unite file_rec:`expand('%:p:h')`<CR>
 " unite-rails
-nnoremap <silent> [unite]rc :<C-u>Unite rails/controller<CR>
-nnoremap <silent> [unite]rm :<C-u>Unite rails/model<CR>
-nnoremap <silent> [unite]rv :<C-u>Unite rails/view<CR>
-nnoremap <silent> [unite]rh :<C-u>Unite rails/helper<CR>
-nnoremap <silent> [unite]rst :<C-u>Unite rails/stylesheet<CR>
-nnoremap <silent> [unite]rj :<C-u>Unite rails/javascript<CR>
+nnoremap <silent> [unite]rc :<C-u>Unite file:app/controllers<CR>
+nnoremap <silent> [unite]rm :<C-u>Unite file:app/models<CR>
+nnoremap <silent> [unite]rv :<C-u>Unite file:app/views<CR>
+nnoremap <silent> [unite]rh :<C-u>Unite file:app/helpers<CR>
+nnoremap <silent> [unite]rst :<C-u>Unite file:app/assets/stylesheets<CR>
+nnoremap <silent> [unite]rj :<C-u>Unite file:app/assets/javascripts<CR>
 nnoremap <silent> [unite]rjo :<C-u>Unite file:app/jobs<CR>
-nnoremap <silent> [unite]rr :<C-u>Unite rails/route<CR>
-nnoremap <silent> [unite]rg :<C-u>Unite rails/gemfile<CR>
-nnoremap <silent> [unite]rp :<C-u>Unite rails/spec<CR>
-nnoremap <silent> [unite]rf :<C-u>Unite rails/features<CR>
+nnoremap <silent> [unite]rr :<C-u>Unite file:route<CR>
+nnoremap <silent> [unite]rg :<C-u>Unite file:Gemfile<CR>
+nnoremap <silent> [unite]rp :<C-u>Unite file:spec<CR>
+nnoremap <silent> [unite]rf :<C-u>Unite file:features<CR>
 nnoremap <silent> [unite]rse :<C-u>Unite file:app/serializers<CR>
 nnoremap <silent> [unite]rs :<C-u>Unite file:app/services<CR>
 nnoremap <silent> [unite]ru :<C-u>Unite file:app/uploaders<CR>
