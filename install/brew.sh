@@ -123,6 +123,8 @@ apps=(
   macdown
   # Mac
   spectacle
+  # Communication
+  slack
 )
 
 brew cask install "${apps[@]}"
