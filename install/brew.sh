@@ -128,6 +128,8 @@ apps=(
   spectacle
   # Communication
   slack
+  # Design
+  abstract
 )
 
 brew cask install "${apps[@]}"
