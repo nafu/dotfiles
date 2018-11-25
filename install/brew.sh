@@ -114,6 +114,7 @@ apps=(
   # Presentation
   keycast
   keycastr
+  deckset
   # Xcode
   alcatraz
   # Asset Catalog Thinkerer to open .car files
