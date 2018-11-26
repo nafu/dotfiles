@@ -21,6 +21,9 @@ defaults write com.apple.dock no-glass -boolean true
 defaults write com.apple.dock autohide-time-modifier -float 0.0
 defaults write com.apple.dock autohide-delay -float 0.0
 
+# Don't animate applications when opening
+defaults write com.apple.dock launchanim -bool false
+
 ###############################################################################
 # Dashboard                                                                   #
 ###############################################################################
