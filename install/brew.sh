@@ -131,6 +131,7 @@ apps=(
   slack
   # Design
   abstract
+  skitch
 )
 
 brew cask install "${apps[@]}"
