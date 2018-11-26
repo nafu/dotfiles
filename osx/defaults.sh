@@ -17,6 +17,9 @@ defaults write com.apple.finder CreateDesktop -bool false
 # 2D dock for Leopard
 defaults write com.apple.dock no-glass -boolean true
 
+# Speed up Dock animations
+defaults write com.apple.dock autohide-time-modifier -float 0.0
+
 ###############################################################################
 # Dashboard                                                                   #
 ###############################################################################
