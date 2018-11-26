@@ -19,6 +19,7 @@ defaults write com.apple.dock no-glass -boolean true
 
 # Speed up Dock animations
 defaults write com.apple.dock autohide-time-modifier -float 0.0
+defaults write com.apple.dock autohide-delay -float 0.0
 
 ###############################################################################
 # Dashboard                                                                   #
