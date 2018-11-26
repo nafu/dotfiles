@@ -10,6 +10,9 @@ defaults write com.apple.finder QuitMenuItem -bool true
 # Hide icons on desktop. The files will still exist.
 defaults write com.apple.finder CreateDesktop -bool false
 
+# Show path from home directory not Macintosh HD
+defaults write com.apple.finder PathBarRootAtHome -bool true
+
 ###############################################################################
 # Dock                                                                        #
 ###############################################################################
