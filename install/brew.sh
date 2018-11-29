@@ -93,6 +93,8 @@ apps=(
   sbt
   # Go
   golang
+  # iOS
+  carthage
 )
 
 brew install "${apps[@]}"
