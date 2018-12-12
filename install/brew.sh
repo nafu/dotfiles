@@ -95,6 +95,8 @@ apps=(
   golang
   # iOS
   carthage
+  # Stats
+  cloc
 )
 
 brew install "${apps[@]}"
