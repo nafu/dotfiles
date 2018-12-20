@@ -137,6 +137,8 @@ apps=(
   abstract
   skitch
   figma
+  # Debug
+  charles
 )
 
 brew cask install "${apps[@]}"
