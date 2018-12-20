@@ -437,9 +437,6 @@ let g:Tex_CompileRule_dvi = 'platex --interaction=nonstopmode $*'
 let g:Tex_CompileRule_pdf = 'dvipdfmx $*.dvi'
 let g:Tex_FormatDependency_pdf = 'dvi,pdf'
 
-" Slack
-let g:slaq_token = 'xoxp-3062595420-3062595430-9326113507-a3240f'
-
 " ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
