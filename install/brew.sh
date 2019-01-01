@@ -139,6 +139,8 @@ apps=(
   figma
   # Debug
   charles
+  # Google Cloud
+  google-cloud-sdk
 )
 
 brew cask install "${apps[@]}"
