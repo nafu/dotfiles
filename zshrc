@@ -109,8 +109,8 @@ alias -s {tgz,lzh,zip,arc}=file-roller
 
 # binding keys
 bindkey -e
-#bindkey '^p' history-beginning-search-backward
-#bindkey '^n' history-beginning-search-forward
+bindkey '^p' history-beginning-search-backward
+bindkey '^n' history-beginning-search-forward
 
 # load our own completion functions
 fpath=(~/.zsh/completion /usr/local/share/zsh/site-functions $fpath)
