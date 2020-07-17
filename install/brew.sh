@@ -63,6 +63,8 @@ apps=(
   reattach-to-user-namespace
   # Mediamedia
   ffmpeg
+  # File
+  unar
   # PHP
   composer
   # Image Manipulation
