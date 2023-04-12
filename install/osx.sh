@@ -3,6 +3,8 @@
 # Install Homebrew & brew-cask
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/nafu/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 brew tap homebrew/cask
 brew install homebrew/cask/brew-cask
 brew tap homebrew/cask-versions
