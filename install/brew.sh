@@ -6,9 +6,9 @@ brew upgrade
 # Requirements
 
 ## ntfs-3g
-brew cask install osxfuse
+brew install --cask osxfuse
 ## ec2-api-tools
-brew cask install java
+brew install --cask java
 
 # Install packages
 
@@ -145,7 +145,7 @@ apps=(
   google-cloud-sdk
 )
 
-brew cask install "${apps[@]}"
+brew install --cask "${apps[@]}"
 
 # Other packages
 
