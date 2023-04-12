@@ -2,7 +2,7 @@
 
 # Install Homebrew & brew-cask
 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew tap caskroom/cask
 brew install caskroom/cask/brew-cask
 brew tap homebrew/versions
