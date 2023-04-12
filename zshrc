@@ -30,6 +30,10 @@ if [ $TERM != "screen" ]; then
         #exec screen -U -S main -xRR
 fi
 
+# brew
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # rbenv
 eval "$(rbenv init -)"
 
