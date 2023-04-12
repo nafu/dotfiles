@@ -3,10 +3,9 @@
 # Install Homebrew & brew-cask
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew tap caskroom/cask
-brew install caskroom/cask/brew-cask
-brew tap homebrew/versions
-brew tap caskroom/versions
+brew tap homebrew/cask
+brew install homebrew/cask/brew-cask
+brew tap homebrew/cask-versions
 
 # Install brew & brew-cask packages
 
