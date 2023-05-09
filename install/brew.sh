@@ -132,6 +132,8 @@ apps=(
   # https://github.com/insidegui/AssetCatalogTinkerer
   asset-catalog-tinkerer
   # Editor
+  ## Xcode
+  xcodes
   ## Text Editor
   coteditor
   ## Markdown Editor
