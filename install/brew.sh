@@ -136,6 +136,8 @@ apps=(
   coteditor
   ## Markdown Editor
   macdown
+  ## VSCode
+  visual-studio-code
   # Mac
   spectacle
   # Communication
