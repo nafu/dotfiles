@@ -106,6 +106,7 @@ brew install "${apps[@]}"
 # Install by using cask
 
 apps=(
+  alfred
   # Requirement for inkscape
   xquartz
   # SVG
