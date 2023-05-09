@@ -107,6 +107,9 @@ brew install "${apps[@]}"
 
 apps=(
   alfred
+  google-chrome
+  dropbox
+  1password7
   # Requirement for inkscape
   xquartz
   # SVG
