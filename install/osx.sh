@@ -4,6 +4,9 @@
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
+# For x86_64
+# arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# eval "$(/usr/local/homebrew/bin/brew shellenv)"
 brew tap homebrew/cask
 brew install homebrew/cask/brew-cask
 brew tap homebrew/cask-versions
