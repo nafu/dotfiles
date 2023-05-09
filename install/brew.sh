@@ -107,6 +107,7 @@ brew install "${apps[@]}"
 apps=(
   alfred
   google-chrome
+  google-japanese-ime
   dropbox
   1password7
   # Requirement for inkscape
