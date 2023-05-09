@@ -110,6 +110,7 @@ apps=(
   google-japanese-ime
   dropbox
   1password7
+  spectacle
   # Requirement for inkscape
   xquartz
   # SVG
