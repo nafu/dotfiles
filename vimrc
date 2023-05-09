@@ -1,4 +1,3 @@
-syntax on
 colorscheme ap_dark8
 set number
 set autoindent
@@ -38,34 +37,57 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " Jump back
 map <C-i> <C-o>
 
-" NeoBundle
-if has('vim_starting')
-  set nocompatible               " Be iMproved
+" Dein
 
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+let $CACHE = expand('~/.cache')
+if !isdirectory($CACHE)
+  call mkdir($CACHE, 'p')
+endif
+if &runtimepath !~# '/dein.vim'
+  let s:dein_dir = fnamemodify('dein.vim', ':p')
+  if !isdirectory(s:dein_dir)
+    let s:dein_dir = $CACHE .. '/dein/repos/github.com/Shougo/dein.vim'
+    if !isdirectory(s:dein_dir)
+      execute '!git clone https://github.com/Shougo/dein.vim' s:dein_dir
+    endif
+  endif
+  execute 'set runtimepath^=' .. substitute(
+        \ fnamemodify(s:dein_dir, ':p') , '[/\\]$', '', '')
 endif
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+" Ward off unexpected things that your distro might have made, as
+" well as sanely reset options when re-sourcing .vimrc
+set nocompatible
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'nathanaelkane/vim-indent-guides'
+" Set dein base path (required)
+let s:dein_base = '~/.cache/dein/'
+
+" Set dein source path (required)
+let s:dein_src = '~/.cache/dein/repos/github.com/Shougo/dein.vim'
+
+" Set dein runtime path (required)
+execute 'set runtimepath+=' .. s:dein_src
+
+" Call dein initialization (required)
+call dein#begin(s:dein_base)
+
+call dein#add(s:dein_src)
+
+" Your plugins go here:
+call dein#add('Shougo/vimproc')
+call dein#add('nathanaelkane/vim-indent-guides')
 let g:indent_guides_enable_on_vim_startup = 1
-" For rails
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'ngmy/vim-rubocop'
-NeoBundle 'tpope/vim-cucumber'
-" NeoBundle 'szw/vim-tags'
+"" For rails
+call dein#add('tpope/vim-rails')
+call dein#add('ngmy/vim-rubocop')
+call dein#add('tpope/vim-cucumber')
+" call dein#add('szw/vim-tags')
 " let g:vim_tags_project_tags_command = "/usr/local/Cellar/ctags/5.8/bin/ctags -f .tags -R {OPTIONS} {DIRECTORY} 2>/dev/null"
 " let g:vim_tags_gems_tags_command = "/usr/local/Cellar/ctags/5.8/bin/ctags -R -f .Gemfile.lock.tags `bundle show --paths` 2>/dev/null"
 " set tags+=.tags
 " set tags+=.Gemfile.lock.tags
-NeoBundle 'tsukkee/unite-tag'
-" NeoBundleLazy 'alpaca-tc/alpaca_tags', {
+call dein#add('tsukkee/unite-tag')
+" call dein#addLazy 'alpaca-tc/alpaca_tags', {
 "       \ 'depends': ['Shougo/vimproc'],
 "       \ 'autoload' : {
 "       \   'commands' : [
@@ -75,7 +97,7 @@ NeoBundle 'tsukkee/unite-tag'
 "       \ ],
 "       \ }}
 
-NeoBundleLazy 'basyura/unite-rails', {
+call dein#add('basyura/unite-rails', {
   \ 'depends' : 'Shougo/unite.vim',
   \ 'autoload' : {
   \   'unite_sources' : [
@@ -86,86 +108,95 @@ NeoBundleLazy 'basyura/unite-rails', {
   \     'rails/mailer', 'rails/model', 'rails/rake', 'rails/route', 'rails/schema', 'rails/spec',
   \     'rails/stylesheet', 'rails/view'
   \   ]
-  \ }}
-NeoBundle 'scrooloose/syntastic'
+  \ }})
+call dein#add('scrooloose/syntastic')
 
-" ファイルオープンを便利に
-NeoBundle 'Shougo/unite.vim'
-" Unite.vimで最近使ったファイルを表示できるようにする
-NeoBundle 'Shougo/neomru.vim'
-" ...省略
-NeoBundle 'thinca/vim-quickrun'
+"" ファイルオープンを便利に
+call dein#add('Shougo/unite.vim')
+"" Unite.vimで最近使ったファイルを表示できるようにする
+call dein#add('Shougo/neomru.vim')
+"" Shell
+call dein#add('thinca/vim-quickrun')
 
-NeoBundle 'Shougo/vimshell'
+call dein#add('Shougo/vimshell')
 
-" Swift
-NeoBundle 'toyamarinyon/vim-swift'
+"" Swift
+call dein#add('toyamarinyon/vim-swift')
 
-" Markdown Preview
-NeoBundle 'shime/vim-livedown'
+"" Markdown Preview
+call dein#add('shime/vim-livedown')
 
-NeoBundle 'tpope/vim-rbenv'
+call dein#add('tpope/vim-rbenv')
 
-NeoBundle 'stjernstrom/vim-ruby-run'
+call dein#add('stjernstrom/vim-ruby-run')
 
-" Git
-NeoBundle 'tpope/vim-fugitive'
+"" Git
+call dein#add('tpope/vim-fugitive')
 
-" pLaTeX
-NeoBundle 'lervag/vimtex'
+"" pLaTeX
+call dein#add('lervag/vimtex')
 
-" OpenBrowser
-NeoBundle 'tyru/open-browser.vim'
+"" OpenBrowser
+call dein#add('tyru/open-browser.vim')
 
-" Ruby向けにendを自動挿入してくれる
-" 追記する際に自動で追加されてしまう
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'vim-scripts/matchit.zip'
+"" Ruby向けにendを自動挿入してくれる
+"" 追記する際に自動で追加されてしまう
+call dein#add('tpope/vim-endwise')
+call dein#add('vim-scripts/matchit.zip')
 
-" コメントON/OFFを手軽に実行
-NeoBundle 'tomtom/tcomment_vim'
+"" コメントON/OFFを手軽に実行
+call dein#add('tomtom/tcomment_vim')
 
-" ログファイルを色づけしてくれる
-NeoBundle 'vim-scripts/AnsiEsc.vim'
+"" ログファイルを色づけしてくれる
+call dein#add('vim-scripts/AnsiEsc.vim')
 
-" 行末の半角スペースを可視化
-NeoBundle 'bronson/vim-trailing-whitespace'
+"" 行末の半角スペースを可視化
+call dein#add('bronson/vim-trailing-whitespace')
 
-" Maintains a history of previous yanks, changes and deletes
-NeoBundle 'vim-scripts/YankRing.vim'
+"" Maintains a history of previous yanks, changes and deletes
+call dein#add('vim-scripts/YankRing.vim')
 
-" WakaTime
-NeoBundle 'wakatime/vim-wakatime'
+"" WakaTime
+call dein#add('wakatime/vim-wakatime')
 
-" Slack
-NeoBundle 'agatan/vim-vlack'
+"" Slack
+call dein#add('agatan/vim-vlack')
 
-" ack
-NeoBundle 'mileszs/ack.vim'
+"" ack
+call dein#add('mileszs/ack.vim')
 
-" Dash
-NeoBundle 'rizzatti/dash.vim'
+"" Dash
+call dein#add('rizzatti/dash.vim')
 
-" Vim Window
-NeoBundle 'kana/vim-submode'
+"" Vim Window
+call dein#add('kana/vim-submode')
 
-" Repl
-NeoBundle 'ujihisa/repl.vim'
+"" Repl
+call dein#add('ujihisa/repl.vim')
 
-" Tidal
-NeoBundle 'munshkr/vim-tidal'
+"" Tidal
+call dein#add('munshkr/vim-tidal')
 
-" Align
-NeoBundle 'junegunn/vim-easy-align'
+"" Align
+call dein#add('junegunn/vim-easy-align')
 
-call neobundle#end()
+" Finish dein initialization (required)
+call dein#end()
 
-" Required:
-filetype plugin indent on
+" Attempt to determine the type of a file based on its name and possibly its
+" contents. Use this to allow intelligent auto-indenting for each filetype,
+" and for plugins that are filetype specific.
+filetype indent plugin on
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+" Enable syntax highlighting
+if has('syntax')
+  syntax on
+endif
+
+" Uncomment if you want to install not-installed plugins on startup.
+"if dein#check_install()
+" call dein#install()
+"endif
 
 " unite
 nnoremap [unite]    <Nop>
