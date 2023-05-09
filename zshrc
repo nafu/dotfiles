@@ -4,6 +4,7 @@ export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=~/dotfiles/lazy-git/bin:$PATH
 export PATH=~/dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/share/cakephp/2.1.0/lib/Cake/Console:$PATH
+export PATH=/opt/homebrew/bin:$PATH
 # For MAMP MySQL
 # export PATH=/usr/local/bin:/usr/local/sbin:/Applications/MAMP/Library/bin:/usr/share/cakephp/2.1.0/lib/Cake/Console:~/usr/local/lazy-git/bin:$PATH
 export LC_ALL=en_US.UTF-8
