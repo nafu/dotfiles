@@ -186,7 +186,7 @@ autoload zmv
 source /usr/local/share/zsh/site-functions/_aws
 
 # pg
-alias pg="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log"
+alias pg="pg_ctl -D $(brew --prefix)/var/postgres -l $(brew --prefix)/var/postgres/server.log"
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
