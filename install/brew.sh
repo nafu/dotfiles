@@ -8,7 +8,7 @@ brew upgrade
 ## ntfs-3g
 brew install --cask osxfuse
 ## ec2-api-tools
-brew install --cask java
+brew install --cask adoptopenjdk8
 
 # Install packages
 
