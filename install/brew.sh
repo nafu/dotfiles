@@ -144,6 +144,7 @@ apps=(
   spectacle
   # Communication
   slack
+  zoom
   # Design
   abstract
   skitch
