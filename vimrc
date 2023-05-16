@@ -69,124 +69,126 @@ let s:dein_src = '~/.cache/dein/repos/github.com/Shougo/dein.vim'
 execute 'set runtimepath+=' .. s:dein_src
 
 " Call dein initialization (required)
-call dein#begin(s:dein_base)
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_base)
 
-call dein#add(s:dein_src)
+  call dein#add(s:dein_src)
 
-" Your plugins go here:
-call dein#add('Shougo/vimproc')
-call dein#add('nathanaelkane/vim-indent-guides')
-let g:indent_guides_enable_on_vim_startup = 1
-"" For rails
-call dein#add('tpope/vim-rails')
-call dein#add('ngmy/vim-rubocop')
-call dein#add('tpope/vim-cucumber')
-" call dein#add('szw/vim-tags')
-" let g:vim_tags_project_tags_command = "/usr/local/Cellar/ctags/5.8/bin/ctags -f .tags -R {OPTIONS} {DIRECTORY} 2>/dev/null"
-" let g:vim_tags_gems_tags_command = "/usr/local/Cellar/ctags/5.8/bin/ctags -R -f .Gemfile.lock.tags `bundle show --paths` 2>/dev/null"
-" set tags+=.tags
-" set tags+=.Gemfile.lock.tags
-call dein#add('tsukkee/unite-tag')
-" call dein#addLazy 'alpaca-tc/alpaca_tags', {
-"       \ 'depends': ['Shougo/vimproc'],
-"       \ 'autoload' : {
-"       \   'commands' : [
-"       \     { 'name' : 'AlpacaTagsBundle', 'complete': 'customlist,alpaca_tags#complete_source' },
-"       \     { 'name' : 'AlpacaTagsUpdate', 'complete': 'customlist,alpaca_tags#complete_source' },
-"       \     'AlpacaTagsSet', 'AlpacaTagsCleanCache', 'AlpacaTagsEnable', 'AlpacaTagsDisable', 'AlpacaTagsKillProcess', 'AlpacaTagsProcessStatus',
-"       \ ],
-"       \ }}
+  " Your plugins go here:
+  call dein#add('Shougo/vimproc')
+  call dein#add('nathanaelkane/vim-indent-guides')
+  let g:indent_guides_enable_on_vim_startup = 1
+  "" For rails
+  call dein#add('tpope/vim-rails')
+  call dein#add('ngmy/vim-rubocop')
+  call dein#add('tpope/vim-cucumber')
+  " call dein#add('szw/vim-tags')
+  " let g:vim_tags_project_tags_command = "/usr/local/Cellar/ctags/5.8/bin/ctags -f .tags -R {OPTIONS} {DIRECTORY} 2>/dev/null"
+  " let g:vim_tags_gems_tags_command = "/usr/local/Cellar/ctags/5.8/bin/ctags -R -f .Gemfile.lock.tags `bundle show --paths` 2>/dev/null"
+  " set tags+=.tags
+  " set tags+=.Gemfile.lock.tags
+  call dein#add('tsukkee/unite-tag')
+  " call dein#addLazy 'alpaca-tc/alpaca_tags', {
+  "       \ 'depends': ['Shougo/vimproc'],
+  "       \ 'autoload' : {
+  "       \   'commands' : [
+  "       \     { 'name' : 'AlpacaTagsBundle', 'complete': 'customlist,alpaca_tags#complete_source' },
+  "       \     { 'name' : 'AlpacaTagsUpdate', 'complete': 'customlist,alpaca_tags#complete_source' },
+  "       \     'AlpacaTagsSet', 'AlpacaTagsCleanCache', 'AlpacaTagsEnable', 'AlpacaTagsDisable', 'AlpacaTagsKillProcess', 'AlpacaTagsProcessStatus',
+  "       \ ],
+  "       \ }}
 
-call dein#add('basyura/unite-rails', {
-  \ 'depends' : 'Shougo/unite.vim',
-  \ 'autoload' : {
-  \   'unite_sources' : [
-  \     'rails/bundle', 'rails/bundled_gem', 'rails/config',
-  \     'rails/controller', 'rails/db', 'rails/destroy', 'rails/features',
-  \     'rails/gem', 'rails/gemfile', 'rails/generate', 'rails/git', 'rails/helper',
-  \     'rails/heroku', 'rails/initializer', 'rails/javascript', 'rails/lib', 'rails/log',
-  \     'rails/mailer', 'rails/model', 'rails/rake', 'rails/route', 'rails/schema', 'rails/spec',
-  \     'rails/stylesheet', 'rails/view'
-  \   ]
-  \ }})
-call dein#add('scrooloose/syntastic')
+  call dein#add('scrooloose/syntastic')
 
-"" Snippet
-call dein#add('Shougo/neocomplete.vim')
-call dein#add('Shougo/neosnippet')
-call dein#add('Shougo/neosnippet-snippets')
+  "" Snippet
+  call dein#add('Shougo/neocomplete.vim')
+  call dein#add('Shougo/neosnippet')
+  call dein#add('Shougo/neosnippet-snippets')
 
-"" ファイルオープンを便利に
-call dein#add('Shougo/unite.vim')
-"" Unite.vimで最近使ったファイルを表示できるようにする
-call dein#add('Shougo/neomru.vim')
-"" Shell
-call dein#add('thinca/vim-quickrun')
+  "" ファイルオープンを便利に
+  call dein#add('Shougo/unite.vim')
+  call dein#add('basyura/unite-rails', {
+    \ 'depends' : 'Shougo/unite.vim',
+    \ 'autoload' : {
+    \   'unite_sources' : [
+    \     'rails/bundle', 'rails/bundled_gem', 'rails/config',
+    \     'rails/controller', 'rails/db', 'rails/destroy', 'rails/features',
+    \     'rails/gem', 'rails/gemfile', 'rails/generate', 'rails/git', 'rails/helper',
+    \     'rails/heroku', 'rails/initializer', 'rails/javascript', 'rails/lib', 'rails/log',
+    \     'rails/mailer', 'rails/model', 'rails/rake', 'rails/route', 'rails/schema', 'rails/spec',
+    \     'rails/stylesheet', 'rails/view'
+    \   ]
+    \ }})
+  "" Unite.vimで最近使ったファイルを表示できるようにする
+  call dein#add('Shougo/neomru.vim')
+  "" Shell
+  call dein#add('thinca/vim-quickrun')
 
-call dein#add('Shougo/vimshell')
+  call dein#add('Shougo/vimshell')
 
-"" Swift
-call dein#add('toyamarinyon/vim-swift')
+  "" Swift
+  call dein#add('toyamarinyon/vim-swift')
 
-"" Markdown Preview
-call dein#add('shime/vim-livedown')
+  "" Markdown Preview
+  call dein#add('shime/vim-livedown')
 
-call dein#add('tpope/vim-rbenv')
+  call dein#add('tpope/vim-rbenv')
 
-call dein#add('stjernstrom/vim-ruby-run')
+  call dein#add('stjernstrom/vim-ruby-run')
 
-"" Git
-call dein#add('tpope/vim-fugitive')
+  "" Git
+  call dein#add('tpope/vim-fugitive')
 
-"" pLaTeX
-call dein#add('lervag/vimtex')
+  "" pLaTeX
+  call dein#add('lervag/vimtex')
 
-"" OpenBrowser
-call dein#add('tyru/open-browser.vim')
+  "" OpenBrowser
+  call dein#add('tyru/open-browser.vim')
 
-"" Ruby向けにendを自動挿入してくれる
-"" 追記する際に自動で追加されてしまう
-call dein#add('tpope/vim-endwise')
-call dein#add('vim-scripts/matchit.zip')
+  "" Ruby向けにendを自動挿入してくれる
+  "" 追記する際に自動で追加されてしまう
+  call dein#add('tpope/vim-endwise')
+  call dein#add('vim-scripts/matchit.zip')
 
-"" コメントON/OFFを手軽に実行
-call dein#add('tomtom/tcomment_vim')
+  "" コメントON/OFFを手軽に実行
+  call dein#add('tomtom/tcomment_vim')
 
-"" ログファイルを色づけしてくれる
-call dein#add('vim-scripts/AnsiEsc.vim')
+  "" ログファイルを色づけしてくれる
+  call dein#add('vim-scripts/AnsiEsc.vim')
 
-"" 行末の半角スペースを可視化
-call dein#add('bronson/vim-trailing-whitespace')
+  "" 行末の半角スペースを可視化
+  call dein#add('bronson/vim-trailing-whitespace')
 
-"" Maintains a history of previous yanks, changes and deletes
-call dein#add('vim-scripts/YankRing.vim')
+  "" Maintains a history of previous yanks, changes and deletes
+  call dein#add('vim-scripts/YankRing.vim')
 
-"" WakaTime
-call dein#add('wakatime/vim-wakatime')
+  "" WakaTime
+  " call dein#add('wakatime/vim-wakatime')
 
-"" Slack
-call dein#add('agatan/vim-vlack')
+  "" Slack
+  call dein#add('agatan/vim-vlack')
 
-"" ack
-call dein#add('mileszs/ack.vim')
+  "" ack
+  call dein#add('mileszs/ack.vim')
 
-"" Dash
-call dein#add('rizzatti/dash.vim')
+  "" Dash
+  call dein#add('rizzatti/dash.vim')
 
-"" Vim Window
-call dein#add('kana/vim-submode')
+  "" Vim Window
+  call dein#add('kana/vim-submode')
 
-"" Repl
-call dein#add('ujihisa/repl.vim')
+  "" Repl
+  call dein#add('ujihisa/repl.vim')
 
-"" Tidal
-call dein#add('munshkr/vim-tidal')
+  "" Tidal
+  call dein#add('munshkr/vim-tidal')
 
-"" Align
-call dein#add('junegunn/vim-easy-align')
+  "" Align
+  call dein#add('junegunn/vim-easy-align')
 
-" Finish dein initialization (required)
-call dein#end()
+  " Finish dein initialization (required)
+  call dein#end()
+endif
 
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
