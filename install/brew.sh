@@ -176,3 +176,6 @@ launchctl setenv JAVA8_HOME `/usr/libexec/java_home -v 1.8`
 heroku plugins:install heroku-accounts
 heroku accounts:add personal
 heroku autocomplete --refresh-cache
+
+### https://junjizhi.medium.com/the-right-way-to-clear-heroku-build-cache-78f065c9fd18
+heroku plugins:install heroku-builds
