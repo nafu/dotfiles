@@ -13,6 +13,9 @@ defaults write com.apple.finder CreateDesktop -bool false
 # Show path from home directory not Macintosh HD
 defaults write com.apple.finder PathBarRootAtHome -bool true
 
+# Show dotfiles
+defaults write com.apple.finder AppleShowAllFiles YES
+
 ###############################################################################
 # Dock                                                                        #
 ###############################################################################
