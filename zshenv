@@ -17,4 +17,6 @@ export CVS_RSH=ssh
 # Prevent to load /etc
 # El Capitan automatically creates /etc/zprofile
 setopt no_global_rcs
+
+# Rust
 . "$HOME/.cargo/env"
