@@ -32,6 +32,8 @@ apps=(
   gmp
   rbenv
   ruby-build
+  # rust
+  rustup-init
   # database
   postgresql
   redis
@@ -179,3 +181,6 @@ heroku autocomplete --refresh-cache
 
 ### https://junjizhi.medium.com/the-right-way-to-clear-heroku-build-cache-78f065c9fd18
 heroku plugins:install heroku-builds
+
+## Rust
+rustup-init
