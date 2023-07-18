@@ -21,11 +21,13 @@ apps=(
   peco
   # Required to use neocomplete.vim
   lua
+  # Utility
   vim
   wget
   awscli
   ack
   the_silver_searcher
+  jq
   # Terminal
   tmux
   # ruby
