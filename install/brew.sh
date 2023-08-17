@@ -157,6 +157,8 @@ apps=(
   charles
   # Google Cloud
   google-cloud-sdk
+  # Stripe
+  stripe/stripe-mock/stripe-mock
 )
 
 brew install --cask "${apps[@]}"
