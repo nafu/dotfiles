@@ -60,6 +60,9 @@ defaults write com.apple.dock expose-animation-duration -float 0.0
 # Disabling press-and-hold for special keys in favor of key repeat
 defaults write -g ApplePressAndHoldEnabled -bool false
 
+# VSCode
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
 ###############################################################################
 # Xcode                                                                       #
 ###############################################################################
