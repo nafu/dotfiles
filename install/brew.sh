@@ -16,6 +16,7 @@ apps=(
   git
   git-lfs
   # GitHub
+  gh
   ghq
   hub
   peco
@@ -174,6 +175,9 @@ brew tap yonaskolb/XcodeGen https://github.com/yonaskolb/XcodeGen.git
 brew install XcodeGen
 
 # Initial setup
+
+## GitHub
+gh extension install github/gh-copilot
 
 ## Java
 launchctl setenv JAVA8_HOME `/usr/libexec/java_home -v 1.8`
