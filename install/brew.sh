@@ -103,6 +103,8 @@ apps=(
   carthage
   # Stats
   cloc
+  # 1Password
+  1password-cli
 )
 
 brew install "${apps[@]}"
