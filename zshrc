@@ -204,3 +204,6 @@ alias pg="pg_ctl -D $(brew --prefix)/var/postgres -l $(brew --prefix)/var/postgr
 # nvm
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+# flutter
+export PATH=~/development/flutter/flutter/bin:$PATH
