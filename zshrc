@@ -20,7 +20,7 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
 
 # Android dev tools
-export ANDROID_HOME=~/Documents/Develop/android/android-sdk-macosx
+export ANDROID_HOME=~/Library/Android/sdk
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 
 # Anaconda
