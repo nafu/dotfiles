@@ -207,3 +207,4 @@ source $(brew --prefix nvm)/nvm.sh
 
 # flutter
 export PATH=~/development/flutter/flutter/bin:$PATH
+export PATH=$PATH:~/.pub-cache/bin
