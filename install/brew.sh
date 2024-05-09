@@ -29,6 +29,7 @@ apps=(
   ack
   the_silver_searcher
   jq
+  asdf
   # Terminal
   tmux
   # ruby
