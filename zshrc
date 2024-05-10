@@ -211,3 +211,4 @@ source $(brew --prefix asdf)/libexec/asdf.sh
 # flutter
 export PATH=$PATH:~/development/flutter/flutter/bin
 export PATH=$PATH:~/.pub-cache/bin
+export FLUTTER_ROOT="$(asdf where flutter)"
