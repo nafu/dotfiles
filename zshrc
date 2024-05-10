@@ -209,5 +209,5 @@ source $(brew --prefix nvm)/nvm.sh
 source $(brew --prefix asdf)/libexec/asdf.sh
 
 # flutter
-export PATH=~/development/flutter/flutter/bin:$PATH
+export PATH=$PATH:~/development/flutter/flutter/bin
 export PATH=$PATH:~/.pub-cache/bin
