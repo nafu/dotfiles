@@ -58,7 +58,7 @@ setopt extended_glob list_types no_beep always_last_prompt
 setopt cdable_vars sh_word_split auto_param_keys pushd_ignore_dups
 #便利だが副作用の強い物はコメントアウト
 #setopt auto_menu correct rm_star)silent sun_keyboard_hack
-#setopt share_history inc_append_history
+setopt share_history inc_append_history
 
 # Alias and functions
 alias copy='cp -ip' del='rm -i' move='mv -i'
