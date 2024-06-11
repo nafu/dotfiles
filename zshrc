@@ -43,7 +43,7 @@ eval "$(pyenv init -)"
 
 # Set Shell variable
 # WORDCHARS=$WORDCHARS:s,/,,
-HISTSIZE=1000 HISTFILE=~/.zhistory SAVEHIST=100000
+HISTSIZE=10000 HISTFILE=~/.zhistory SAVEHIST=100000
 # 重複を記録しない
 setopt hist_ignore_dups
 # 開始と終了を記録
