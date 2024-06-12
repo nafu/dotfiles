@@ -64,6 +64,8 @@ setopt share_history inc_append_history
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 ## highlight
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+## k
+source ~/.zsh/plugins/k/k.sh
 
 # Alias and functions
 alias copy='cp -ip' del='rm -i' move='mv -i'
