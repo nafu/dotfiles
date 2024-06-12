@@ -30,6 +30,7 @@ apps=(
   the_silver_searcher
   jq
   asdf
+  autojump
   # Terminal
   tmux
   # ruby
