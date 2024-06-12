@@ -30,7 +30,9 @@ apps=(
   the_silver_searcher
   jq
   asdf
+  ## zsh
   autojump
+  zsh-syntax-highlighting
   # Terminal
   tmux
   # ruby
