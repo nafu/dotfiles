@@ -10,3 +10,6 @@
 [submodule "zsh/plugins/k"]
 	path = zsh/plugins/k
 	url = git@github.com:supercrabtree/k.git
+[submodule "zsh/plugins/enhancd"]
+	path = zsh/plugins/enhancd
+	url = https://github.com/babarot/enhancd
