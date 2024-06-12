@@ -3,10 +3,10 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:'
 export PATH=/opt/homebrew/share/npm/bin:$PATH
 export PATH=~/dotfiles/lazy-git/bin:$PATH
-export PATH=~/dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/share/cakephp/2.1.0/lib/Cake/Console:$PATH
+export PATH=~/dotfiles/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 # For MAMP MySQL
-# export PATH=/usr/local/bin:/usr/local/sbin:/Applications/MAMP/Library/bin:/usr/share/cakephp/2.1.0/lib/Cake/Console:~/usr/local/lazy-git/bin:$PATH
+# export PATH=/Applications/MAMP/Library/bin:/usr/share/cakephp/2.1.0/lib/Cake/Console:$PATH
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -166,9 +166,6 @@ function show-git-current-branch {
 }
 
 PROMPT='%B%~%b `show-git-current-branch` %(?..[%F{red}%?%f%b] )%# '
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 # add / as a word
 autoload -Uz select-word-style
