@@ -1,7 +1,7 @@
 # Set Colors
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:'
-export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/opt/homebrew/share/npm/bin:$PATH
 export PATH=~/dotfiles/lazy-git/bin:$PATH
 export PATH=~/dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/share/cakephp/2.1.0/lib/Cake/Console:$PATH
 export PATH=/opt/homebrew/bin:$PATH
@@ -11,7 +11,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Go
-export GOROOT=/usr/local/opt/go/libexec
+export GOROOT=/opt/homebrew/opt/go/libexec
 export GOPATH=$HOME
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
@@ -127,7 +127,7 @@ bindkey '^p' history-beginning-search-backward
 bindkey '^n' history-beginning-search-forward
 
 # load our own completion functions
-fpath=(~/.zsh/completion /usr/local/share/zsh/site-functions $fpath)
+fpath=(~/.zsh/completion /opt/homebrew/share/zsh/site-functions $fpath)
 # 補完システムを利用：補完の挙動が分かりやすくなる２つの設定のみ記述
 zstyle ':completion:*' format '%BCompleting %d%b'
 zstyle ':completion:*' group-name ''
@@ -192,7 +192,7 @@ bindkey "^o" history-beginning-search-backward-end
 autoload zmv
 
 # awscli
-source /usr/local/share/zsh/site-functions/_aws
+source /opt/homebrew/share/zsh/site-functions/_aws
 
 # pg
 alias pg="pg_ctl -D $(brew --prefix)/var/postgres -l $(brew --prefix)/var/postgres/server.log"
@@ -202,10 +202,10 @@ alias pg="pg_ctl -D $(brew --prefix)/var/postgres -l $(brew --prefix)/var/postgr
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+[[ -f /opt/homebrew/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /opt/homebrew/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+[[ -f /opt/homebrew/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /opt/homebrew/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
