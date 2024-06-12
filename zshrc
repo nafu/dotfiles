@@ -60,6 +60,9 @@ setopt cdable_vars sh_word_split auto_param_keys pushd_ignore_dups
 #setopt auto_menu correct rm_star)silent sun_keyboard_hack
 setopt share_history inc_append_history
 
+## autojump
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
 # Alias and functions
 alias copy='cp -ip' del='rm -i' move='mv -i'
 alias fullreset='echo "\ec\ec"'
