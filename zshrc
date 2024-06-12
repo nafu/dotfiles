@@ -66,6 +66,8 @@ setopt share_history inc_append_history
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ## k
 source ~/.zsh/plugins/k/k.sh
+## enhancd
+source ~/.zsh/plugins/enhancd/init.sh
 
 # Alias and functions
 alias copy='cp -ip' del='rm -i' move='mv -i'
