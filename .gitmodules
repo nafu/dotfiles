@@ -7,3 +7,6 @@
 [submodule "lazy-git"]
 	path = lazy-git
 	url = git@github.com:nafu/lazy-git.git
+[submodule "zsh/plugins/k"]
+	path = zsh/plugins/k
+	url = git@github.com:supercrabtree/k.git
