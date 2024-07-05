@@ -166,6 +166,8 @@ apps=(
   google-cloud-sdk
   # Stripe
   stripe/stripe-mock/stripe-mock
+  # Media
+  vlc
 )
 
 brew install --cask "${apps[@]}"
