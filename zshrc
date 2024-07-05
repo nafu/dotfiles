@@ -210,7 +210,12 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # asdf
-source $(brew --prefix asdf)/libexec/asdf.sh
+if [ -f "$PWD/.tool-versions" ]; then
+  source $(brew --prefix asdf)/libexec/asdf.sh
+else
+  export PATH=`echo $PATH | sed -E 's/(.*)\.asdf([^:]*)://'`
+  export PATH=`echo $PATH | sed -E 's/(.*)\asdf([^:]*)://'`
+fi
 
 # flutter
 export PATH=$PATH:~/development/flutter/flutter/bin
