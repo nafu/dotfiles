@@ -71,6 +71,7 @@ apps=(
   reattach-to-user-namespace
   # Mediamedia
   ffmpeg
+  youtube-dl
   # File
   unar
   # PHP
