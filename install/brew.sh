@@ -132,8 +132,9 @@ apps=(
   # Android
   android-studio
   intel-haxm
-  # Docker
+  # Containers and VMs
   docker
+  orbstack
   # Presentation
   keycast
   keycastr
