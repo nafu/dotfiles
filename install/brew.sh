@@ -69,7 +69,7 @@ apps=(
   cabal-install
   # pbcopy with Tmux
   reattach-to-user-namespace
-  # Mediamedia
+  # Media
   ffmpeg
   youtube-dl
   # File
