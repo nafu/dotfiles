@@ -110,6 +110,8 @@ apps=(
   cloc
   # 1Password
   1password-cli
+  # Proxy
+  ngrok/ngrok/ngrok
 )
 
 brew install "${apps[@]}"
