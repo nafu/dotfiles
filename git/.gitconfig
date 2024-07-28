@@ -3,6 +3,9 @@
 	username = nafu
 	email = nakamurafumiya003@gmail.com
 	signingkey = B9391DC70CFF3839
+# For organization specific config
+# [includeIf "gitdir:~/Projects/organization/"]
+# 	path = ~/.gitconfig-organization
 [alias]
 	st = status
 	co = checkout
