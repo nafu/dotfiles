@@ -195,6 +195,7 @@ gh extension install github/gh-copilot
 
 ## Java
 launchctl setenv JAVA8_HOME `/usr/libexec/java_home -v 1.8`
+sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
 
 ## Heroku
 heroku plugins:install heroku-accounts
