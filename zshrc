@@ -224,3 +224,6 @@ export FLUTTER_ROOT="$(asdf where flutter)"
 
 ## enhancd (make sure to put after compinit)
 source ~/.zsh/plugins/enhancd/init.sh
+
+# enable passphrase prompt for gpg
+export GPG_TTY=$(tty)
