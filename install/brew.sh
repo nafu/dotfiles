@@ -112,6 +112,8 @@ apps=(
   1password-cli
   # Proxy
   ngrok/ngrok/ngrok
+  # Java 11
+  openjdk@11
 )
 
 brew install "${apps[@]}"
