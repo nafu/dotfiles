@@ -16,7 +16,7 @@ export GOPATH=$HOME
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=`/usr/libexec/java_home -v 17`
 export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
 
 # Android dev tools
