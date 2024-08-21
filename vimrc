@@ -201,6 +201,11 @@ if has('syntax')
   syntax on
 endif
 
+" highlight for search
+set hlsearch
+hi Search ctermbg=Red
+hi Search ctermfg=Black
+
 " Uncomment if you want to install not-installed plugins on startup.
 if dein#check_install()
  call dein#install()
