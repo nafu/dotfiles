@@ -54,6 +54,8 @@ apps=(
   ec2-api-tools
   s3cmd
   awsebcli
+  # Azure
+  azure-cli
   # CI
   bitrise
   # Python
