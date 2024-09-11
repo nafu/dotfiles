@@ -218,9 +218,12 @@ else
 fi
 
 # flutter
-export PATH=$PATH:~/development/flutter/flutter/bin
-export PATH=$PATH:~/.pub-cache/bin
-export FLUTTER_ROOT="$(asdf where flutter)"
+if [ -f "$PWD/.tool-versions" ]; then
+  export PATH=$PATH:~/.pub-cache/bin
+  export FLUTTER_ROOT="$(asdf where flutter)"
+else
+  export PATH=$PATH:~/development/flutter/flutter/bin
+fi
 
 ## enhancd (make sure to put after compinit)
 source ~/.zsh/plugins/enhancd/init.sh
