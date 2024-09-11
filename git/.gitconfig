@@ -62,3 +62,5 @@
 	gpgsign = true
 [include]
 	path = ~/.gitconfig.local
+[http]
+	postBuffer = 524288000
