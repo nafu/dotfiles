@@ -189,6 +189,10 @@ brew install codeclimate
 brew tap yonaskolb/XcodeGen https://github.com/yonaskolb/XcodeGen.git
 brew install XcodeGen
 
+## Terraform
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+
 # Initial setup
 
 ## GitHub
