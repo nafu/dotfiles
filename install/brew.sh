@@ -174,6 +174,7 @@ apps=(
   # Google Cloud
   google-cloud-sdk
   # Stripe
+  stripe/stripe-cli/stripe
   stripe/stripe-mock/stripe-mock
   # Media
   vlc
