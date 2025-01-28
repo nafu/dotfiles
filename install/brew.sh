@@ -178,6 +178,8 @@ apps=(
   stripe/stripe-mock/stripe-mock
   # Media
   vlc
+  # Security testing
+  zap
 )
 
 brew install --cask "${apps[@]}"
