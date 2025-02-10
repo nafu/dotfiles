@@ -30,6 +30,8 @@ apps=(
   the_silver_searcher
   jq
   asdf
+  ## Coverage
+  lcov
   ## zsh
   autojump
   zsh-syntax-highlighting
