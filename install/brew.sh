@@ -97,6 +97,7 @@ apps=(
   wp-cli
   # Javascript
   yarn
+  deno
   # Vim
   ctags
   # Morphological analysis
