@@ -187,6 +187,11 @@ if dein#load_state(s:dein_dir)
   "" Align
   call dein#add('junegunn/vim-easy-align')
 
+  "" AI
+
+  """ Copilot
+  call dein#add('github/copilot.vim')
+
   " Finish dein initialization (required)
   call dein#end()
 endif
