@@ -154,6 +154,8 @@ apps=(
   # https://github.com/insidegui/AssetCatalogTinkerer
   asset-catalog-tinkerer
   # Editor
+  ## Vim
+  nvim
   ## Xcode
   xcodes
   ## Text Editor
