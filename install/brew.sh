@@ -162,6 +162,8 @@ apps=(
   macdown
   ## VSCode
   visual-studio-code
+  ## AI
+  windsurf
   # Mac
   spectacle
   # Communication
