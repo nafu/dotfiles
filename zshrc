@@ -132,6 +132,15 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 autoload -U compinit && compinit
 
+## More completion
+
+cp_complete_directory() {
+  LBUFFER="${LBUFFER%/*}/"
+  zle self-insert
+}
+zle -N cp_complete_directory
+bindkey '^X^D' cp_complete_directory
+
 # get and show branch name
 
 autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
@@ -230,3 +239,6 @@ source ~/.zsh/plugins/enhancd/init.sh
 
 # enable passphrase prompt for gpg
 export GPG_TTY=$(tty)
+
+# Added by Windsurf
+export PATH=~/.codeium/windsurf/bin:$PATH
