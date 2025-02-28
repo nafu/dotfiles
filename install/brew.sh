@@ -98,6 +98,7 @@ apps=(
   # Javascript
   yarn
   deno
+  pnpm
   # Vim
   ctags
   # Morphological analysis
