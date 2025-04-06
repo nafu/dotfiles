@@ -13,6 +13,8 @@ apps=(
   node-google-apps-script
   # AWS Serverless
   serverless
+  # AI
+  repomix
 )
 
 npm install -g "${apps[@]}"
