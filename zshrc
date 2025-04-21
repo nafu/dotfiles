@@ -242,3 +242,7 @@ export GPG_TTY=$(tty)
 
 # Added by Windsurf
 export PATH=~/.codeium/windsurf/bin:$PATH
+
+# Added by aider
+# https://github.com/Aider-AI/aider
+export PATH=~/.local/bin:$PATH
