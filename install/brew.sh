@@ -134,6 +134,7 @@ apps=(
   dropbox
   1password7
   spectacle
+  karabiner-elements
   # Requirement for inkscape
   xquartz
   # SVG
