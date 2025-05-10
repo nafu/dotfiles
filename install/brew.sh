@@ -189,6 +189,8 @@ apps=(
   vlc
   # Security testing
   zap
+  # Notes
+  obsidian
 )
 
 brew install --cask "${apps[@]}"
