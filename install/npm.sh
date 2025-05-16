@@ -15,6 +15,7 @@ apps=(
   serverless
   # AI
   repomix
+  @openai/codex
 )
 
 npm install -g "${apps[@]}"
