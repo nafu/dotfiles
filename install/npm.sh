@@ -16,6 +16,7 @@ apps=(
   # AI
   repomix
   @openai/codex
+  @anthropic-ai/claude-code
 )
 
 npm install -g "${apps[@]}"
