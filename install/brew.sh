@@ -169,6 +169,7 @@ apps=(
   visual-studio-code
   ## AI
   windsurf
+  claude
   # Mac
   spectacle
   # Communication
