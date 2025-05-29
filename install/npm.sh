@@ -13,6 +13,8 @@ apps=(
   node-google-apps-script
   # AWS Serverless
   serverless
+  # Shopify
+  @shopify/cli
   # AI
   repomix
   @openai/codex
