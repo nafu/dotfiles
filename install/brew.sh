@@ -42,7 +42,7 @@ apps=(
   rbenv
   ruby-build
   # rust
-  rustup-init
+  rustup
   # database
   postgresql
   redis
