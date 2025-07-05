@@ -46,3 +46,6 @@ mkdir -p ~/Dropbox/todo
 # mv ~/.todo.actions.d ~/.todo.actions.d`date '+%Y%m%d'`
 rm -r ~/.todo.actions.d
 ln -sfv ~/dotfiles/todo.actions.d ~/.todo.actions.d
+
+# claude
+ln -sfv ~/dotfiles/UserCLAUDE.md ~/.claude/CLAUDE.md
