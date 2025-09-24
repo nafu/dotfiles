@@ -246,3 +246,9 @@ export PATH=~/.codeium/windsurf/bin:$PATH
 # Added by aider
 # https://github.com/Aider-AI/aider
 export PATH=~/.local/bin:$PATH
+
+# qlty
+# https://qlty.sh/dashboard
+# Install qlty via `curl -sSL https://qlty.sh/install | sh`
+export QLTY_INSTALL="$HOME/.qlty"
+export PATH="$QLTY_INSTALL/bin:$PATH"
