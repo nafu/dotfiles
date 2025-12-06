@@ -49,3 +49,4 @@ ln -sfv ~/dotfiles/todo.actions.d ~/.todo.actions.d
 
 # claude
 ln -sfv ~/dotfiles/claude/CLAUDE.md ~/.claude/CLAUDE.md
+ln -sfv ~/dotfiles/claude/settings.json ~/.claude/settings.json
