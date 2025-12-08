@@ -62,6 +62,7 @@ apps=(
   bitrise
   # Python
   pyenv
+  uv
   # GIF
   gifsicle
   # Dirt and Haskell (Dependencies of Tidal)
