@@ -192,6 +192,8 @@ apps=(
   zap
   # Notes
   obsidian
+  # 3D Modeling
+  blender
 )
 
 brew install --cask "${apps[@]}"
