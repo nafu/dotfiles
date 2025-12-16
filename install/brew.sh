@@ -131,6 +131,7 @@ brew install "${apps[@]}"
 apps=(
   alfred
   google-chrome
+  google-chrome@canary
   google-japanese-ime
   dropbox
   1password7
