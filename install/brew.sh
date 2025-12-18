@@ -122,6 +122,8 @@ apps=(
   # Java
   openjdk@11
   openjdk@17
+  # IoT
+  openocd
 )
 
 brew install "${apps[@]}"
