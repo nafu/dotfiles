@@ -124,6 +124,8 @@ apps=(
   openjdk@17
   # IoT
   openocd
+  # AI
+  anomalyco/tap/opencode
 )
 
 brew install "${apps[@]}"
