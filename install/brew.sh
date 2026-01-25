@@ -174,6 +174,7 @@ apps=(
   ## AI
   windsurf
   claude
+  antigravity
   # Mac
   spectacle
   # Communication
