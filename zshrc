@@ -252,3 +252,6 @@ export PATH=~/.local/bin:$PATH
 # Install qlty via `curl -sSL https://qlty.sh/install | sh`
 export QLTY_INSTALL="$HOME/.qlty"
 export PATH="$QLTY_INSTALL/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/nafu/.antigravity/antigravity/bin:$PATH"
