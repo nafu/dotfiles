@@ -153,6 +153,7 @@ apps=(
   # Containers and VMs
   docker
   orbstack
+  virtualbox
   # Presentation
   keycast
   keycastr
