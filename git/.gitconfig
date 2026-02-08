@@ -15,7 +15,7 @@
         new = yellow
         old = blue
 [core]
-	excludesfile = /Users/nafu/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	fsmonitor = true
 	untrackedcache = true
 	splitIndex = true
