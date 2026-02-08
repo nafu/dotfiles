@@ -16,6 +16,9 @@
         old = blue
 [core]
 	excludesfile = /Users/nafu/.gitignore_global
+	fsmonitor = true
+	untrackedcache = true
+	splitIndex = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -65,3 +68,5 @@
 	path = ~/.gitconfig.local
 [http]
 	postBuffer = 524288000
+[index]
+	threads = 0
