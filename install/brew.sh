@@ -124,6 +124,8 @@ apps=(
   openjdk@17
   # IoT
   openocd
+  # SSL
+  mkcert
   # AI
   anomalyco/tap/opencode
 )
