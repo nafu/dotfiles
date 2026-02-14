@@ -178,6 +178,7 @@ apps=(
   windsurf
   claude
   antigravity
+  codex-app
   # Mac
   spectacle
   # Communication
