@@ -17,6 +17,8 @@ apps=(
   --upgrade https://storage.googleapis.com/tensorflow/mac/tensorflow-0.8.0-py3-none-any.whl
   # AI
   aider-install
+  # Markdown
+  markdown
 )
 
 pip install "${apps[@]}"
