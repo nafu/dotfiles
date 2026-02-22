@@ -27,6 +27,10 @@ brew tap homebrew/cask-versions
 
 . install/cabal.sh
 
+# Install npx packages
+
+. install/npx.sh
+
 # Install docker images
 
 . install/docker.sh
