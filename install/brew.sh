@@ -205,6 +205,8 @@ apps=(
   obsidian
   # 3D Modeling
   blender
+  # PDF
+  poppler
 )
 
 brew install --cask "${apps[@]}"
