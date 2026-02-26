@@ -76,6 +76,10 @@
       "Bash(sudo dd:*)"
     ]
   },
+  "model": "opus",
   "alwaysThinkingEnabled": true,
-  "model": "opus"
+  "skipDangerousModePermissionPrompt": false,
+  "permissions": {
+    "disableBypassPermissionsMode": "disable"
+  }
 }
