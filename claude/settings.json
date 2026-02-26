@@ -74,12 +74,10 @@
       "Bash(sudo rm:*)",
       "Bash(sudo mkfs:*)",
       "Bash(sudo dd:*)"
-    ]
+    ],
+    "disableBypassPermissionsMode": "disable"
   },
   "model": "opus",
   "alwaysThinkingEnabled": true,
   "skipDangerousModePermissionPrompt": false,
-  "permissions": {
-    "disableBypassPermissionsMode": "disable"
-  }
 }
