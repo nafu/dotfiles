@@ -19,6 +19,8 @@ apps=(
   repomix
   @openai/codex
   @anthropic-ai/claude-code
+  # Container
+  @devcontainers/cli
 )
 
 npm install -g "${apps[@]}"
