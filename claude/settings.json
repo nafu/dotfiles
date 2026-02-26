@@ -79,5 +79,5 @@
   },
   "model": "opus",
   "alwaysThinkingEnabled": true,
-  "skipDangerousModePermissionPrompt": false,
+  "skipDangerousModePermissionPrompt": false
 }
