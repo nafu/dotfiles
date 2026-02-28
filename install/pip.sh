@@ -19,6 +19,10 @@ apps=(
   aider-install
   # Markdown
   markdown
+  # Video
+  manim
+  moviepy
+  gTTS
 )
 
 pip install "${apps[@]}"
