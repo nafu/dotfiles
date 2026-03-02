@@ -30,3 +30,8 @@
 - Break down large features into smaller tasks
 - Mark tasks as completed immediately when done
 - Only have one task in progress at a time
+
+## Working Directory Rules
+- All script creation and execution must be done within the project directory
+- Temporary files, scripts, and execution output must go in `tmp/` (not /tmp)
+- Writing to /tmp or any location outside the project directory is prohibited
