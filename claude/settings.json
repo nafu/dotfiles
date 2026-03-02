@@ -73,7 +73,12 @@
       "Bash(reboot:*)",
       "Bash(sudo rm:*)",
       "Bash(sudo mkfs:*)",
-      "Bash(sudo dd:*)"
+      "Bash(sudo dd:*)",
+      "Bash(* > /tmp/*)",
+      "Bash(* >> /tmp/*)",
+      "Edit(/tmp/**)",
+      "Bash(cp * /tmp/*)",
+      "Bash(mv * /tmp/*)"
     ],
     "disableBypassPermissionsMode": "disable"
   },
