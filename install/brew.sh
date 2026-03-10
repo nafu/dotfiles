@@ -141,6 +141,7 @@ apps=(
   google-japanese-ime
   dropbox
   1password7
+  1password
   spectacle
   karabiner-elements
   # Requirement for inkscape
