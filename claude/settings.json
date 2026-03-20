@@ -82,7 +82,7 @@
     ],
     "disableBypassPermissionsMode": "disable"
   },
-  "model": "opus",
+  "model": "opus[1m]",
   "alwaysThinkingEnabled": true,
   "skipDangerousModePermissionPrompt": false
 }
