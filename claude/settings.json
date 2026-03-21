@@ -83,6 +83,9 @@
     "disableBypassPermissionsMode": "disable"
   },
   "model": "opus[1m]",
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true
+  },
   "alwaysThinkingEnabled": true,
   "skipDangerousModePermissionPrompt": false
 }
