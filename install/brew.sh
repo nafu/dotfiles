@@ -208,6 +208,8 @@ apps=(
   blender
   # PDF
   poppler
+  # Shell Testing
+  bats-core
 )
 
 brew install --cask "${apps[@]}"
