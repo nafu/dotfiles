@@ -119,7 +119,9 @@
       "Edit(~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal/Extra/**)",
       "Edit(~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal/Inbox/**)",
       "Edit(~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal/Obsidian Notes/**)",
-      "Edit(~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal/Templates/**)"
+      "Edit(~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal/Templates/**)",
+      "Bash(obsidian eval:*)",
+      "Bash(obsidian dev:mobile:*)"
     ],
     "disableBypassPermissionsMode": "disable"
   },
