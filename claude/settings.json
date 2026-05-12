@@ -51,7 +51,20 @@
       "mcp__github__search_users",
       "mcp__github__list_workflow_runs",
       "mcp__github__get_workflow_run",
-      "mcp__github__get_workflow_run_logs"
+      "mcp__github__get_workflow_run_logs",
+      "Bash(obsidian read:*)",
+      "Bash(obsidian search:*)",
+      "Bash(obsidian backlinks:*)",
+      "Bash(obsidian tags:*)",
+      "Bash(obsidian tasks:*)",
+      "Bash(obsidian help:*)",
+      "Bash(obsidian daily:read)",
+      "Bash(obsidian create *path=\"Claude/*)",
+      "Bash(obsidian create *path=Claude/*)",
+      "Bash(obsidian append *path=\"Claude/*)",
+      "Bash(obsidian append *path=Claude/*)",
+      "Bash(obsidian property:set *path=\"Claude/*)",
+      "Bash(obsidian property:set *path=Claude/*)"
     ],
     "deny": [
       "Bash(rm -rf /*)",
