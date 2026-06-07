@@ -41,6 +41,7 @@ apps=(
   gmp
   rbenv
   ruby-build
+  vips
   # rust
   rustup
   # database
