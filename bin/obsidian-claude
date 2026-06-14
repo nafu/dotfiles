@@ -1,0 +1,167 @@
+#!/bin/zsh
+setopt errexit nounset pipefail
+
+readonly OBSIDIAN_DIR="${OBSIDIAN_DIR:-$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents}"
+readonly SESSION_NAME="${CLAUDE_TMUX_SESSION:-obsidian-claude}"
+readonly CLAUDE_COMMAND_TEXT="${CLAUDE_RESUME_COMMAND:-claude --continue}"
+readonly CLAUDE_WINDOW_NAME="${CLAUDE_TMUX_CLAUDE_WINDOW:-claude}"
+readonly SHELL_WINDOW_NAME="${CLAUDE_TMUX_SHELL_WINDOW:-shell}"
+readonly SCRIPT_PATH="${${(%):-%x}:A}"
+typeset -ra CLAUDE_COMMAND_WORDS=("${(@Q)${(@z)CLAUDE_COMMAND_TEXT}}")
+
+keep_terminal_open() {
+  print -r -- ""
+  print -r -- "Press Ctrl-D or close this Terminal window when done."
+  exec /bin/zsh -l
+}
+
+ensure_claude_command() {
+  if (( ${#CLAUDE_COMMAND_WORDS[@]} == 0 )); then
+    print -u2 -r -- "Claude command is empty."
+    keep_terminal_open
+  fi
+
+  if ! command -v "$CLAUDE_COMMAND_WORDS[1]" >/dev/null 2>&1; then
+    print -u2 -r -- "$CLAUDE_COMMAND_WORDS[1] was not found on PATH."
+    keep_terminal_open
+  fi
+}
+
+validate_tmux_name() {
+  local label="$1"
+  local value="$2"
+  local safe_name_pattern='^[A-Za-z0-9_.-]+$'
+
+  if [[ ! "$value" =~ $safe_name_pattern ]]; then
+    print -u2 -r -- "$label contains unsafe characters: $value"
+    print -u2 -r -- "Use only letters, numbers, dots, underscores, and hyphens."
+    keep_terminal_open
+  fi
+}
+
+validate_tmux_names() {
+  validate_tmux_name "CLAUDE_TMUX_SESSION" "$SESSION_NAME"
+  validate_tmux_name "CLAUDE_TMUX_CLAUDE_WINDOW" "$CLAUDE_WINDOW_NAME"
+  validate_tmux_name "CLAUDE_TMUX_SHELL_WINDOW" "$SHELL_WINDOW_NAME"
+}
+
+run_claude() {
+  if [[ ! -d "$OBSIDIAN_DIR" ]]; then
+    print -u2 -r -- "Obsidian directory not found: $OBSIDIAN_DIR"
+    keep_terminal_open
+  fi
+
+  cd "$OBSIDIAN_DIR"
+  ensure_claude_command
+
+  set +e
+  "${CLAUDE_COMMAND_WORDS[@]}"
+  local exit_status="$?"
+  set -e
+
+  print -u2 -r -- ""
+  print -u2 -r -- "Claude exited with status $exit_status."
+  keep_terminal_open
+}
+
+claude_launcher_command() {
+  print -r -- "${(q)SCRIPT_PATH} --run-claude"
+}
+
+tmux_window_id_by_name() {
+  local wanted_window_name="$1"
+  local window_id window_name
+
+  while IFS=$'\t' read -r window_id window_name; do
+    if [[ "$window_name" == "$wanted_window_name" ]]; then
+      print -r -- "$window_id"
+      return 0
+    fi
+  done < <(tmux list-windows -t "$SESSION_NAME" -F '#{window_id}\t#{window_name}')
+
+  return 1
+}
+
+start_claude_if_idle() {
+  local claude_window_id="$1"
+  local pane_command
+
+  pane_command="$(tmux display-message -p -t "$claude_window_id" '#{pane_current_command}')"
+
+  case "$pane_command" in
+    sh|bash|zsh|fish|login|-sh|-bash|-zsh)
+      tmux respawn-pane -k -t "$claude_window_id" -c "$OBSIDIAN_DIR" "$(claude_launcher_command)"
+      ;;
+  esac
+}
+
+ensure_shell_window() {
+  local shell_window_id
+
+  shell_window_id="$(tmux_window_id_by_name "$SHELL_WINDOW_NAME" || true)"
+  if [[ -z "$shell_window_id" ]]; then
+    tmux new-window -d -t "$SESSION_NAME:" -n "$SHELL_WINDOW_NAME" -c "$OBSIDIAN_DIR"
+  fi
+}
+
+inside_terminal() {
+  if [[ ! -d "$OBSIDIAN_DIR" ]]; then
+    print -u2 -r -- "Obsidian directory not found: $OBSIDIAN_DIR"
+    keep_terminal_open
+  fi
+
+  cd "$OBSIDIAN_DIR"
+  validate_tmux_names
+
+  if ! command -v tmux >/dev/null 2>&1; then
+    print -u2 -r -- "tmux was not found on PATH."
+    keep_terminal_open
+  fi
+
+  ensure_claude_command
+
+  if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
+    local existing_claude_window_id
+
+    existing_claude_window_id="$(tmux_window_id_by_name "$CLAUDE_WINDOW_NAME" || true)"
+    if [[ -z "$existing_claude_window_id" ]]; then
+      existing_claude_window_id="$(tmux new-window -d -P -F '#{window_id}' -t "$SESSION_NAME:" -n "$CLAUDE_WINDOW_NAME" -c "$OBSIDIAN_DIR" "$(claude_launcher_command)")"
+    fi
+
+    start_claude_if_idle "$existing_claude_window_id"
+    ensure_shell_window
+    tmux select-window -t "$existing_claude_window_id"
+    exec tmux attach-session -t "$SESSION_NAME"
+  fi
+
+  local claude_window_id
+  claude_window_id="$(tmux new-session -d -P -F '#{window_id}' -s "$SESSION_NAME" -n "$CLAUDE_WINDOW_NAME" -c "$OBSIDIAN_DIR" "$(claude_launcher_command)")"
+
+  ensure_shell_window
+  tmux select-window -t "$claude_window_id"
+  exec tmux attach-session -t "$SESSION_NAME"
+}
+
+open_terminal_window() {
+  /usr/bin/osascript - "$SCRIPT_PATH" <<'APPLESCRIPT'
+on run argv
+  set scriptPath to item 1 of argv
+  tell application "Terminal"
+    activate
+    do script quoted form of scriptPath & " --inside-terminal"
+  end tell
+end run
+APPLESCRIPT
+}
+
+case "${1:-}" in
+  --inside-terminal)
+    inside_terminal
+    ;;
+  --run-claude)
+    run_claude
+    ;;
+  *)
+    open_terminal_window
+    ;;
+esac
