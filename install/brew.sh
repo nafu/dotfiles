@@ -183,6 +183,7 @@ apps=(
   claude
   antigravity
   codex-app
+  chatgpt
   # Mac
   spectacle
   # Communication
